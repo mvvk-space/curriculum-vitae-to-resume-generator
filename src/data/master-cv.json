@@ -1,0 +1,702 @@
+{
+    "basics": {
+        "name": "John Cameron Norman",
+        "email": "razodin137@gmail.com",
+        "location": "Chiang Rai, Thailand",
+        "linkedin": "www.linkedin.com/in/kaojaicam",
+        "summary": "In addition to my creative work, I am also a certified teacher of English as a foreign language (TEFL), and I have been tutoring students of various ages and levels for more than five years. My passion for business and God drives my personal and professional growth. I believe that creating wealth is not only a financial goal, but also a spiritual journey. I seek to apply the timeless wisdom and insights of the Bible to my business endeavors, and to see the divine in the ordinary.",
+        "image": "https://ui-avatars.com/api/?name=John+Norman&size=200"
+    },
+    "education": [
+        {
+            "institution": "Mae Fah Luang University",
+            "area": "Thai Language and Culture (2021-2026)",
+            "tags": [
+                "education",
+                "linguistics",
+                "international"
+            ]
+        },
+        {
+            "institution": "Eastern Kentucky University",
+            "area": "English Language and Literature/Letters (2019-2021)",
+            "highlights": [
+                {
+                    "text": "Heavily involved in student organizations and pursuits including acting and non-profit work.",
+                    "tags": [
+                        "education",
+                        "creative"
+                    ]
+                },
+                {
+                    "text": "Successfully navigated university costs via grants and scholarships, turning a profit on education.",
+                    "tags": [
+                        "education",
+                        "business"
+                    ]
+                }
+            ],
+            "tags": [
+                "education",
+                "linguistics"
+            ]
+        },
+        {
+            "institution": "Chiang Mai University",
+            "area": "Teaching Certification, TESOL/ESL (2018)",
+            "tags": [
+                "education",
+                "teaching"
+            ]
+        },
+        {
+            "institution": "Lafayette Senior High School",
+            "area": "High School Diploma (2009-2013)",
+            "tags": [
+                "education"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "company": "Outlier",
+            "role": "Language Quality Evaluator",
+            "startDate": "May 2024",
+            "endDate": "Present",
+            "highlights": [
+                {
+                    "text": "Evaluate AI language models for accuracy and safety in both English and Thai.",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                },
+                {
+                    "text": "Detailed linguistic analysis for major tech companies including Google and OpenAI's LLMs.",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                },
+                {
+                    "text": "Manual review of AI chatbot outputs for refinement and safety.",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "kaojaicam",
+            "role": "Website Design, Events and Community",
+            "startDate": "Oct 2021",
+            "endDate": "Present",
+            "highlights": [
+                {
+                    "text": "Acting as a 'creative doula' or birth coach for big ideas, helping individuals overcome the fear of launching creative work.",
+                    "tags": [
+                        "creative",
+                        "business"
+                    ]
+                },
+                {
+                    "text": "Facilitating smooth and joyful 'births' of insurmountable-seeming projects through design and community support.",
+                    "tags": [
+                        "creative",
+                        "technical"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Keeneland Association",
+            "role": "Bartender",
+            "startDate": "Apr 2019",
+            "endDate": "Apr 2019",
+            "highlights": [
+                {
+                    "text": "Served during Kentucky's classic horse racing spring meetup (three week season).",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "NoLi Artist Space",
+            "role": "Studio Assistant",
+            "startDate": "May 2019",
+            "endDate": "Dec 2019",
+            "highlights": [
+                {
+                    "text": "Assisted in the management of a collective artist studio space in Lexington, KY.",
+                    "tags": [
+                        "creative",
+                        "business"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Kula Eats Vegan Food Truck",
+            "role": "Head of Operations",
+            "startDate": "2019-06-11",
+            "endDate": "2019-11-26",
+            "highlights": [
+                {
+                    "text": "Managed operations for a regional vegan food truck in Central Kentucky.",
+                    "tags": [
+                        "business",
+                        "management",
+                        "hospitality"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Mellow Mushroom",
+            "role": "Server",
+            "startDate": "2019",
+            "endDate": "2019",
+            "highlights": [
+                {
+                    "text": "Provided high-quality table service in a high-volume restaurant environment.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Centered Holistic Health",
+            "role": "Healing Center Coordinator / Sound Bath",
+            "startDate": "Jun 2019",
+            "endDate": "Nov 2019",
+            "highlights": [
+                {
+                    "text": "Coordinated front desk operations, managed scheduling, and facilitated sound bath sessions.",
+                    "tags": [
+                        "business",
+                        "management",
+                        "service",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Chiang Mai University",
+            "role": "English Language Teacher",
+            "startDate": "Jun 2018",
+            "endDate": "Nov 2018",
+            "highlights": [
+                {
+                    "text": "Educator within one of Thailand's top public universities, featuring a rich language program.",
+                    "tags": [
+                        "teaching",
+                        "education",
+                        "international"
+                    ]
+                },
+                {
+                    "text": "Served as Agent Educator for the entirety of Chiang Mai Province.",
+                    "tags": [
+                        "teaching",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Alta’s Rustler Lodge",
+            "role": "Server",
+            "startDate": "2018-12-11",
+            "endDate": "2019-02-17",
+            "highlights": [
+                {
+                    "text": "Table service and guest relations at a premier ski lodge in Alta, UT.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "World Merit",
+            "role": "Action Plan Executor (APE)",
+            "startDate": "Jan 2017",
+            "endDate": "Sep 2017",
+            "highlights": [
+                {
+                    "text": "Executed action plans for global impact initiatives in London.",
+                    "tags": [
+                        "international",
+                        "business",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Pal's Hostel and Pal's Mini",
+            "role": "Hostel Operations & Auditor",
+            "startDate": "2017",
+            "endDate": "2017",
+            "highlights": [
+                {
+                    "text": "Performed auditing and operational support for multiple boutique hostel locations in Budapest.",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Marin Headlands Center For The Arts",
+            "role": "Chef's Assistant",
+            "startDate": "Feb 2017",
+            "endDate": "May 2017",
+            "highlights": [
+                {
+                    "text": "Partnered directly with Chef Damon to deliver an exceptional hospitality meal program for resident artists.",
+                    "tags": [
+                        "hospitality",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International USA",
+            "role": "Front Office - Marin Headlands",
+            "startDate": "Feb 2017",
+            "endDate": "May 2017",
+            "highlights": [
+                {
+                    "text": "Managed front office operations and guest services in the Marin mountains.",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International USA",
+            "role": "Front Desk - Fisherman's Wharf",
+            "startDate": "Aug 2016",
+            "endDate": "Feb 2017",
+            "highlights": [
+                {
+                    "text": "Front desk management and city-center hospitality at a high-volume San Francisco hostel.",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Kentucky Native Cafe",
+            "role": "Restaurant Staff",
+            "startDate": "Jun 2016",
+            "endDate": "Aug 2016",
+            "highlights": [
+                {
+                    "text": "Seasonal restaurant service in a high-traffic garden cafe environment.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Common Grounds Coffee",
+            "role": "Barista and Chef",
+            "startDate": "Sep 2015",
+            "endDate": "Jan 2016",
+            "highlights": [
+                {
+                    "text": "Dual-role performance in coffee craft and kitchen preparation.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Breaking Bread Bakery",
+            "role": "Dishwasher",
+            "startDate": "Oct 2014",
+            "endDate": "May 2015",
+            "highlights": [
+                {
+                    "text": "Essential backend operations and support for a busy local bakery.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International",
+            "role": "Hostel Staff",
+            "startDate": "Mar 2014",
+            "endDate": "Mar 2015",
+            "highlights": [
+                {
+                    "text": "General staffing and operational support for budget-travel accommodations.",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Jeanie Gorrell Floral Design",
+            "role": "Floral Assistant and Contractor",
+            "startDate": "Jun 2015",
+            "endDate": "Aug 2017",
+            "highlights": [
+                {
+                    "text": "Contractor for high-end events across Central Kentucky.",
+                    "tags": [
+                        "creative",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "21c Museum Hotels",
+            "role": "Bartender",
+            "startDate": "Jan 2018",
+            "endDate": "Apr 2018",
+            "highlights": [
+                {
+                    "text": "Bartending in a high-volume, upscale museum-centric hotel environment.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Meze Wine Bar & Bistro",
+            "role": "Sous Chef",
+            "startDate": "Jun 2014",
+            "endDate": "Aug 2014",
+            "highlights": [
+                {
+                    "text": "Prepared high-quality Mediterranean cuisine in a fast-paced bistro environment.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Amazon",
+            "role": "Fulfillment Associate",
+            "startDate": "Nov 2013",
+            "endDate": "Dec 2013",
+            "highlights": [
+                {
+                    "text": "Managed high-volume order fulfillment and inventory logistics during the peak holiday season.",
+                    "tags": [
+                        "service",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Historic Home Renovation",
+            "role": "Renovation and Maintenance",
+            "startDate": "Summers 2015",
+            "endDate": "2017",
+            "highlights": [
+                {
+                    "text": "Performed maintenance and renewed old features on the oldest home in Lexington, KY.",
+                    "tags": [
+                        "creative",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Red River Gorge Rocktoberfest",
+            "role": "Event Staff / Volunteer",
+            "startDate": "2011",
+            "endDate": "2013",
+            "highlights": [
+                {
+                    "text": "Supported event operations and festival logistics in Kentucky.",
+                    "tags": [
+                        "service",
+                        "hospitality"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Oyate Oglala Sioux Reservation",
+            "role": "Construction Volunteer",
+            "startDate": "Jul 2012",
+            "endDate": "Jul 2012",
+            "highlights": [
+                {
+                    "text": "Volunteered in the construction of a school in South Dakota.",
+                    "tags": [
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "The Buffalo Christian Center",
+            "role": "Volunteer Children's Guide",
+            "startDate": "Jun 2010",
+            "endDate": "Jul 2010",
+            "highlights": [
+                {
+                    "text": "Led activities and guided children in Buffalo, New York.",
+                    "tags": [
+                        "service",
+                        "ministry",
+                        "education"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Crave Festival",
+            "role": "Event Staff",
+            "startDate": "2015",
+            "endDate": "2015",
+            "highlights": [
+                {
+                    "text": "Balanced diverse roles: Musician Tent Staff, Ticket Sales, and Cleanup Volunteer.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Clos Saron (Work-Trade)",
+            "role": "Vineyard Assistant",
+            "startDate": "2014",
+            "endDate": "2014",
+            "highlights": [
+                {
+                    "text": "Participated in work-trade for manual vineyard labor in Oregon House, California.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Bobcat Ridge Avocados (Work-Trade)",
+            "role": "Farm Assistant",
+            "startDate": "2014",
+            "endDate": "2014",
+            "highlights": [
+                {
+                    "text": "Manual labor and farm support in Santa Cruz, California.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Gerald's House",
+            "role": "Property Maintenance & Support",
+            "startDate": "2021",
+            "endDate": "2021",
+            "highlights": [
+                {
+                    "text": "Maintenance and logistical support in Lexington, Kentucky.",
+                    "tags": [
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Helen's Home / Astral Ship",
+            "role": "Work-Trade / Community Support",
+            "startDate": "2020",
+            "endDate": "2020",
+            "highlights": [
+                {
+                    "text": "Work-trade and community building in the Deiniolen mountains of Wales.",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Megan/Ben/Awen's House",
+            "role": "Work-Trade",
+            "startDate": "2020",
+            "endDate": "2020",
+            "highlights": [
+                {
+                    "text": "Eco-living and maintenance support in Machynlleth, Wales.",
+                    "tags": [
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Red River Gorgeous",
+            "role": "Cabin Maintenance & Operations",
+            "startDate": "2009-06-01",
+            "endDate": "2009-07-28",
+            "highlights": [
+                {
+                    "text": "Operational support and cabin life maintenance in the Red River Gorge area of Kentucky.",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        }
+    ],
+    "projects": [],
+    "skills": [
+        {
+            "name": "TEFL Certified Educator",
+            "tags": [
+                "teaching",
+                "education"
+            ]
+        },
+        {
+            "name": "Bilingual: English and Thai",
+            "tags": [
+                "linguistics",
+                "international"
+            ]
+        },
+        {
+            "name": "AI Language Quality Assessment",
+            "tags": [
+                "linguistics",
+                "technical"
+            ]
+        },
+        {
+            "name": "Website Design & UI/UX",
+            "tags": [
+                "technical",
+                "creative"
+            ]
+        },
+        {
+            "name": "Operations Management",
+            "tags": [
+                "business",
+                "management"
+            ]
+        },
+        {
+            "name": "Hospitality & Service",
+            "tags": [
+                "hospitality",
+                "service"
+            ]
+        },
+        {
+            "name": "Creative Strategy / Birth Coaching",
+            "tags": [
+                "creative"
+            ]
+        },
+        {
+            "name": "Biblical Integration",
+            "tags": [
+                "ministry",
+                "business"
+            ]
+        },
+        {
+            "name": "Mean typing speed: 60 WPM (98% accuracy)",
+            "tags": [
+                "technical",
+                "business"
+            ]
+        },
+        {
+            "name": "Thai typing: 14 WPM (In Progress)",
+            "tags": [
+                "linguistics"
+            ]
+        },
+        {
+            "name": "Advanced Linux & Windows (GUI & Terminal)",
+            "tags": [
+                "technical"
+            ]
+        }
+    ],
+    "achievements": [
+        {
+            "text": "Grand Champion & Best Speaker - University-wide Debate Tournament (MFU)",
+            "tags": [
+                "education",
+                "international"
+            ]
+        },
+        {
+            "text": "Grand Prize - Joseph Beth Graphic Novel Competition",
+            "tags": [
+                "creative"
+            ]
+        },
+        {
+            "text": "Sustainability project proposal at The House of Lords (British Parliament) for UN SDGs",
+            "tags": [
+                "international",
+                "business"
+            ]
+        },
+        {
+            "text": "Solo-travel to 20 countries, self-funded via volunteer work (WWOOF)",
+            "tags": [
+                "international",
+                "hospitality"
+            ]
+        }
+    ]
+}

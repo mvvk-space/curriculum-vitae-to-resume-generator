@@ -1,0 +1,62 @@
+[
+    {
+        "slug": "teaching",
+        "title": "Teaching & Education",
+        "tags": [
+            "teaching",
+            "education",
+            "international"
+        ]
+    },
+    {
+        "slug": "technical",
+        "title": "Technical & AI Quality",
+        "tags": [
+            "linguistics",
+            "technical",
+            "international"
+        ]
+    },
+    {
+        "slug": "business",
+        "title": "Operations & Business",
+        "tags": [
+            "business",
+            "management",
+            "technical"
+        ]
+    },
+    {
+        "slug": "hospitality",
+        "title": "Hospitality & Service",
+        "tags": [
+            "hospitality",
+            "service",
+            "international"
+        ]
+    },
+    {
+        "slug": "creative",
+        "title": "Creative & Design",
+        "tags": [
+            "creative",
+            "technical"
+        ]
+    },
+    {
+        "slug": "full",
+        "title": "Master CV (All Fields)",
+        "tags": [
+            "teaching",
+            "education",
+            "linguistics",
+            "technical",
+            "business",
+            "management",
+            "hospitality",
+            "service",
+            "creative",
+            "international"
+        ]
+    }
+]
