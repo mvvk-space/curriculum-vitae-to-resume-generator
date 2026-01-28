@@ -12,6 +12,14 @@ A powerful, highly-customizable resume generator built with **Astro**. Generate 
 
 ---
 
+### New Entries, New Experiences.
+
+If you need to add a new entry to the resume, you can use the `TEMPLATES.md` file in `src/data/` as a reference. It's right next to your master-cv.json file that you're going to be using for ALL your data. 
+
+master-cv.json is the master file that contains all your education, experiences, skills, achievements, etc.
+
+---
+
 ## 🛠️ Performance & Themes
 
 ### 🖥️ The Dashboard
