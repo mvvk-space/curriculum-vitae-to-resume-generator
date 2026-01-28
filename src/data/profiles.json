@@ -2,6 +2,7 @@
     {
         "slug": "teaching",
         "title": "Teaching & Education",
+        "summary": "Certified TEFL educator with over five years of experience tutoring diverse age groups. Specialist in Thai Language and Culture with a passion for cross-cultural communication and linguistic development in international environments.",
         "tags": [
             "teaching",
             "education",
@@ -11,6 +12,7 @@
     {
         "slug": "technical",
         "title": "Technical & AI Quality",
+        "summary": "Language Quality Evaluator specialized in AI model assessment for English and Thai. Expert in linguistic analysis for LLMs, combining technical proficiency in Linux environments with advanced bilingual communication skills.",
         "tags": [
             "linguistics",
             "technical",
@@ -20,6 +22,7 @@
     {
         "slug": "business",
         "title": "Operations & Business",
+        "summary": "Versatile operations manager with experience in regional logistics, front office management, and boutique hospitality auditing. Proven track record in streamlining business processes and sustaining high-quality service standards.",
         "tags": [
             "business",
             "management",
@@ -29,6 +32,7 @@
     {
         "slug": "hospitality",
         "title": "Hospitality & Service",
+        "summary": "Hospitality professional with extensive international experience in boutique hostels, high-volume restaurants, and premier ski lodges. Expert in guest relations, operational support, and delivering exceptional service across 20+ countries.",
         "tags": [
             "hospitality",
             "service",
@@ -38,6 +42,7 @@
     {
         "slug": "creative",
         "title": "Creative & Design",
+        "summary": "Creative strategist and designer focused on helping individuals launch insurmontable projects. Experienced in website design, UI/UX, and collective artist space management, acting as a 'creative doula' for innovative ideas.",
         "tags": [
             "creative",
             "technical"
@@ -46,6 +51,7 @@
     {
         "slug": "full",
         "title": "Master CV (All Fields)",
+        "summary": "Comprehensive professional profile spanning education, AI language quality, business operations, international hospitality, and creative strategy. A polymath approach to problem-solving and cross-disciplinary projects.",
         "tags": [
             "teaching",
             "education",

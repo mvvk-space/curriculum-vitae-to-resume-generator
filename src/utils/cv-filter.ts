@@ -58,28 +58,18 @@ export function filterCV(cv: MasterCV, targetTags: string[]): MasterCV {
         proj.tags.some(tag => targetTags.includes(tag))
     );
 
-    // 3. Filter and Sort Education (Newest First)
-    filtered.education = (filtered.education || []).map(edu => {
-        if (edu.highlights) {
-            edu.highlights = edu.highlights.filter((h: CVHighlight) =>
-                h.tags.some((tag: string) => targetTags.includes(tag))
-            );
-        }
-        return edu;
-    }).filter(edu =>
-        edu.tags.some(tag => targetTags.includes(tag)) ||
-        (edu.highlights && edu.highlights.length > 0)
-    ).sort((a, b) => parseDateValue(b.area) - parseDateValue(a.area));
+    // 3. Keep All Education and Sort (Newest First)
+    filtered.education = (filtered.education || []).sort((a, b) => parseDateValue(b.area) - parseDateValue(a.area));
 
     // 4. Filter Skills
     filtered.skills = (filtered.skills || []).filter(skill =>
         skill.tags.some(tag => targetTags.includes(tag))
     );
 
-    // 5. Filter Achievements
-    filtered.achievements = (filtered.achievements || []).filter(ach =>
-        ach.tags.some(tag => targetTags.includes(tag))
-    );
+    // 5. Keep All Achievements
+    filtered.achievements = (filtered.achievements || []);
+
+    return filtered;
 
     return filtered;
 }

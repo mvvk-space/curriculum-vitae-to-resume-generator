@@ -1,43 +1,80 @@
-# Astro Starter Kit: Minimal
+# 🚀 Resume Engine
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A powerful, highly-customizable resume generator built with **Astro**. Generate tailored resumes for different roles from a single Master CV data source using advanced tag-based filtering.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Features
 
-## 🚀 Project Structure
+-   **🎯 Multi-Profile Generation**: Create specific CV versions (Teaching, Technical, Business, etc.) from one `master-cv.json`.
+-   **🎨 Dynamic Themes**: Switch between multiple professional styles in real-time.
+-   **🖼️ Identity Gallery**: Drag-and-drop profile pictures and select them from a visual gallery.
+-   **📄 PDF Ready**: Optimized for "Print to PDF" with letter-size formatting and high-fidelity layouts.
+-   **⚡ Built with Astro**: Ultra-fast static site generation.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Performance & Themes
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 🖥️ The Dashboard
+Select your target profile and theme from our premium dark-mode dashboard.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![Dashboard](public/screenshots/dashboard.png)
 
-Any static assets, like images, can be placed in the `public/` directory.
+### 🎭 Theme Selection
+Toggle between different aesthetics to match the job you're applying for.
 
-## 🧞 Commands
+| Classic | Modern | NeoBrutal |
+| :---: | :---: | :---: |
+| ![Classic](public/screenshots/dashboard.png) | ![Modern](public/screenshots/dashboard_modern.png) | ![NeoBrutal](public/screenshots/dashboard_neobrutal.png) |
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🖼️ Profile Picture Gallery
+Customize your identity. Any image dropped into `public/images/profiles/` automatically appears in the selection gallery.
 
-## 👀 Want to learn more?
+![PFP Gallery](public/screenshots/pfp_gallery.png)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 📄 Output Styles
+
+### 🏛️ Classic Theme
+A traditional, serif-based layout for established industries.
+![Classic Resume](public/screenshots/resume_classic.png)
+
+### 💎 Modern Theme
+A sleek sidebar layout with emerald accents and professional spacing.
+![Modern Resume](public/screenshots/resume_modern.png)
+
+### 🤘 NeoBrutal Theme
+A bold, high-contrast design for creative and technical roles. Thick borders, bright colors, and hard shadows.
+![NeoBrutal Resume](public/screenshots/resume_neobrutal.png)
+
+---
+
+## 🚀 Getting Started
+
+1.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+2.  **Run development server**:
+    ```bash
+    npm run dev
+    ```
+3.  **Edit your data**:
+    -   Update `src/data/master-cv.json` with your personal info.
+    -   Define profiles in `src/data/profiles.json`.
+4.  **Add images**:
+    -   Drop photos in `public/images/profiles/`.
+5.  **Build & Print**:
+    -   Select your profile/theme, click "Generate Resume", and use `Cmd/Ctrl + P` to save as PDF.
+
+---
+
+## 📂 Project Structure
+
+-   `src/data/`: JSON sources for CV and Profile definitions.
+-   `src/pages/`: Astro routes for the dashboard and dynamic resume generation.
+-   `src/styles/themes/`: CSS implementations for each theme.
+-   `src/utils/`: Logic for filtering and sorting CV items based on tags.
+-   `public/images/profiles/`: Your custom profile pictures.

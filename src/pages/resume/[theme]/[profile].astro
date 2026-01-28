@@ -16,16 +16,20 @@ export function getStaticPaths() {
             props: {
                 tags: profile.tags,
                 profileName: profile.title,
+                profileSummary: (profile as any).summary,
                 theme: theme,
             },
         })),
     );
 }
 
-const { tags, profileName, theme } = Astro.props;
+const { tags, profileName, profileSummary, theme } = Astro.props;
 const { profile } = Astro.params;
 
 const resume = filterCV(masterCV as MasterCV, tags);
+if (profileSummary) {
+    resume.basics.summary = profileSummary;
+}
 ---
 
 <link rel="stylesheet" href={`/src/styles/themes/${theme}.css`} />
