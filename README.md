@@ -63,6 +63,7 @@ A bold, high-contrast design for creative and technical roles. Thick borders, br
     ```
 3.  **Edit your data**:
     -   Update `src/data/master-cv.json` with your personal info.
+    -   **Tip:** Look at the `"TEMPLATES"` block at the top of the JSON file for clean examples you can copy-paste into your experience or education lists.
     -   Define profiles in `src/data/profiles.json`.
 4.  **Add images**:
     -   Drop photos in `public/images/profiles/`.

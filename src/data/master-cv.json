@@ -1,4 +1,42 @@
 {
+    "TEMPLATES": {
+        "experience": {
+            "company": "Company Name",
+            "role": "Your Job Title",
+            "startDate": "Month YYYY",
+            "endDate": "Month YYYY or Present",
+            "highlights": [
+                {
+                    "text": "Bullet point describing a task or result.",
+                    "tags": [
+                        "technical",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "institution": "University Name",
+            "area": "Degree Name or Field (YYYY-YYYY)",
+            "tags": [
+                "education"
+            ]
+        },
+        "skill": {
+            "name": "Skill Name",
+            "tags": [
+                "technical",
+                "creative"
+            ]
+        },
+        "achievement": {
+            "text": "Description of an award, certification, or key win.",
+            "tags": [
+                "international",
+                "education"
+            ]
+        }
+    },
     "basics": {
         "name": "John Cameron Norman",
         "email": "razodin137@gmail.com",
