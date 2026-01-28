@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><title>Resume Engine Dashboard</title><link rel="stylesheet" href="styles/main.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head> <body> <div class="container"> <div class="header"> <h1>Resume Engine 🚀</h1> <p>Select a tag-profile to generate a specific version of your CV.</p> <div class="theme-selector"> <button class="theme-btn active" data-theme="classic" onclick="setTheme('classic')">Classic</button> <button class="theme-btn" data-theme="modern" onclick="setTheme('modern')">Modern</button> <button class="theme-btn" data-theme="neobrutal" onclick="setTheme('neobrutal')">NeoBrutal</button> </div> <div class="lang-selector"> <button class="lang-btn active" data-lang="en" onclick="setLang('en')">English</button> <button class="lang-btn" data-lang="th" onclick="setLang('th')">Thai</button> </div> <div class="pfp-section" style="margin-top: 2.5rem;"> <label style="color: var(--text-muted); font-size: 0.875rem; display: block; margin-bottom: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Selected Identity</label> <div class="pfp-gallery" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;"> <div class="pfp-item active" data-pfp="" onclick="setPFP('')" title="Default"> <div class="pfp-frame"> <div class="pfp-placeholder">👤</div> </div> </div> <div class="pfp-item" data-pfp="images/profiles/demo.png" onclick="setPFP('images/profiles/demo.png')" title="demo.png"> <div class="pfp-frame"> <img src="images/profiles/demo.png" alt="demo.png"> </div> </div> </div> </div> </div> <div class="grid"> <div class="card"> <h2>Teaching &amp; Education</h2> <div class="tags"> <span class="tag">teaching</span><span class="tag">education</span><span class="tag">international</span> </div> <a href="resume/en/classic/teaching/index.html" class="btn generate-btn" data-slug="teaching">
+Generate Resume
+</a> </div><div class="card"> <h2>Technical &amp; AI Quality</h2> <div class="tags"> <span class="tag">linguistics</span><span class="tag">technical</span><span class="tag">international</span> </div> <a href="resume/en/classic/technical/index.html" class="btn generate-btn" data-slug="technical">
+Generate Resume
+</a> </div><div class="card"> <h2>Operations &amp; Business</h2> <div class="tags"> <span class="tag">business</span><span class="tag">management</span><span class="tag">technical</span> </div> <a href="resume/en/classic/business/index.html" class="btn generate-btn" data-slug="business">
+Generate Resume
+</a> </div><div class="card"> <h2>Hospitality &amp; Service</h2> <div class="tags"> <span class="tag">hospitality</span><span class="tag">service</span><span class="tag">international</span> </div> <a href="resume/en/classic/hospitality/index.html" class="btn generate-btn" data-slug="hospitality">
+Generate Resume
+</a> </div><div class="card"> <h2>Creative &amp; Design</h2> <div class="tags"> <span class="tag">creative</span><span class="tag">technical</span> </div> <a href="resume/en/classic/creative/index.html" class="btn generate-btn" data-slug="creative">
+Generate Resume
+</a> </div><div class="card"> <h2>Master CV (All Fields)</h2> <div class="tags"> <span class="tag">teaching</span><span class="tag">education</span><span class="tag">linguistics</span><span class="tag">technical</span><span class="tag">business</span><span class="tag">management</span><span class="tag">hospitality</span><span class="tag">service</span><span class="tag">creative</span><span class="tag">international</span> </div> <a href="resume/en/classic/full/index.html" class="btn generate-btn" data-slug="full">
+Generate Resume
+</a> </div> </div> <div class="stats"> <h3>Master CV Stats</h3> <p> <strong>Total Items:</strong> 33 jobs, 4 edu, 11 skills, 4 achievements
+</p> <p><strong>Available Tags:</strong> business, creative, education, hospitality, international, linguistics, management, ministry, service, teaching, technical</p> </div> </div> <script>
+      let currentTheme = localStorage.getItem("resume-theme") || "classic";
+      let currentPFP = localStorage.getItem("resume-pfp") || "";
+      let currentLang = localStorage.getItem("resume-lang") || "en";
+
+      function setTheme(theme) {
+        currentTheme = theme;
+        document.querySelectorAll(".theme-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.theme === theme);
+        });
+        updateLinks();
+        localStorage.setItem("resume-theme", theme);
+      }
+
+      function setLang(lang) {
+        currentLang = lang;
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+        updateLinks();
+        localStorage.setItem("resume-lang", lang);
+      }
+
+      function setPFP(pfp) {
+        currentPFP = pfp;
+        document.querySelectorAll(".pfp-item").forEach((item) => {
+          item.classList.toggle("active", (item.dataset.pfp || "") === pfp);
+        });
+        updateLinks();
+        localStorage.setItem("resume-pfp", pfp);
+      }
+
+      function updateLinks() {
+        document.querySelectorAll(".generate-btn").forEach((btn) => {
+          const slug = btn.dataset.slug;
+          // Use relative path and append index.html for file:// compatibility
+          let href = `resume/${currentLang}/${currentTheme}/${slug}/index.html`;
+          if (currentPFP) {
+            href += `?pfp=${encodeURIComponent(currentPFP)}`;
+          }
+          btn.href = href;
+        });
+      }
+
+      // Initialize items
+      setPFP(currentPFP);
+      setTheme(currentTheme);
+      setLang(currentLang);
+    </script> </body> </html>

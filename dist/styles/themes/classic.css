@@ -1,0 +1,204 @@
+:root {
+  --text-color: #1a1a1a;
+  --heading-color: #000000;
+  --muted-color: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text-color);
+  font-size: 11pt;
+  line-height: 1.4;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  background: white;
+}
+
+main {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25in;
+  border-bottom: 2pt solid #000;
+  padding-bottom: 0.15in;
+}
+
+header .info h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.05in;
+}
+
+header .info .contact {
+  font-size: 10pt;
+  color: var(--muted-color);
+}
+
+header .info .contact span {
+  margin-right: 0.3in;
+}
+
+.profile-picture {
+  width: 90pt;
+  height: 90pt;
+  border-radius: 50%;
+  border: 2pt solid #333;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  margin-bottom: 0.2in;
+}
+
+h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  color: var(--heading-color);
+  border-bottom: 1pt solid #000;
+  padding-bottom: 0.05in;
+  margin-bottom: 0.1in;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.02in;
+}
+
+h3 .company {
+  font-weight: 400;
+  color: var(--muted-color);
+}
+
+h3 .date {
+  float: right;
+  font-weight: 400;
+  font-size: 10pt;
+  color: var(--muted-color);
+}
+
+p {
+  margin-bottom: 0.05in;
+  font-size: 10pt;
+}
+
+ul {
+  margin: 0.05in 0;
+  padding-left: 0.2in;
+}
+
+li {
+  font-size: 10pt;
+  margin-bottom: 0.03in;
+  line-height: 1.35;
+}
+
+.summary p {
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.education-item,
+.experience-item {
+  margin-bottom: 0.12in;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.06in;
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-grid li {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 10pt;
+}
+
+.skills-grid li:not(:last-child):after {
+  content: "•";
+  margin-left: 0.1in;
+  color: #666;
+}
+
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements-list li {
+  padding-left: 0.12in;
+  position: relative;
+}
+
+.achievements-list li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--muted-color);
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 0;
+    margin: 0;
+  }
+
+  .print-button {
+    display: none !important;
+  }
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  z-index: 100;
+}
+
+.print-button:hover {
+  background-color: #000;
+}
