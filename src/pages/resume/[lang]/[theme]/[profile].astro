@@ -1,40 +1,70 @@
 ---
-import masterCV from "../../../data/master-cv.json";
-import profiles from "../../../data/profiles.json";
-import { filterCV } from "../../../utils/cv-filter";
-import type { MasterCV } from "../../../types/cv";
+import masterCVEn from "../../../../data/master-cv.json";
+import masterCVTh from "../../../../data/master-cv-th.json";
+import profiles from "../../../../data/profiles.json";
+import { filterCV } from "../../../../utils/cv-filter";
+import type { MasterCV } from "../../../../types/cv";
 
 export function getStaticPaths() {
     const themes = ["classic", "modern", "neobrutal"];
+    const languages = ["en", "th"];
 
-    return themes.flatMap((theme) =>
-        profiles.map((profile) => ({
-            params: {
-                theme: theme,
-                profile: profile.slug,
-            },
-            props: {
-                tags: profile.tags,
-                profileName: profile.title,
-                profileSummary: (profile as any).summary,
-                theme: theme,
-            },
-        })),
+    return languages.flatMap((lang) =>
+        themes.flatMap((theme) =>
+            profiles.map((profile) => ({
+                params: {
+                    lang: lang,
+                    theme: theme,
+                    profile: profile.slug,
+                },
+                props: {
+                    tags: profile.tags,
+                    profileName: profile.title,
+                    profileSummary: (profile as any).summary,
+                    theme: theme,
+                    lang: lang,
+                },
+            })),
+        ),
     );
 }
 
-const { tags, profileName, profileSummary, theme } = Astro.props;
-const { profile } = Astro.params;
+const { tags, profileName, profileSummary, theme, lang } = Astro.props;
 
+const masterCV = lang === "th" ? masterCVTh : masterCVEn;
 const resume = filterCV(masterCV as MasterCV, tags);
+
 if (profileSummary) {
     resume.basics.summary = profileSummary;
 }
+
+const labels = {
+    en: {
+        education: "Education",
+        experience: "Experience",
+        skills: "Skills",
+        achievements: "Achievements",
+        print: "Print / Save as PDF",
+    },
+    th: {
+        education: "การศึกษา",
+        experience: "ประสบการณ์การทำงาน",
+        skills: "ทักษะ",
+        achievements: "ผลงานและความสำเร็จ",
+        print: "พิมพ์ / บันทึกเป็น PDF",
+    },
+}[lang as "en" | "th"] || {
+    education: "Education",
+    experience: "Experience",
+    skills: "Skills",
+    achievements: "Achievements",
+    print: "Print / Save as PDF",
+};
 ---
 
-<link rel="stylesheet" href={`../../../styles/themes/${theme}.css`} />
+<link rel="stylesheet" href={`../../../../styles/themes/${theme}.css`} />
 
-<html lang="en">
+<html lang={lang}>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
@@ -42,7 +72,7 @@ if (profileSummary) {
     </head>
     <body>
         <button class="print-button" onclick="window.print()"
-            >Print / Save as PDF</button
+            >{labels.print}</button
         >
 
         <header>
@@ -83,7 +113,7 @@ if (profileSummary) {
             {
                 resume.education.length > 0 && (
                     <section class="education">
-                        <h2>Education</h2>
+                        <h2>{labels.education}</h2>
                         {resume.education.map((edu) => (
                             <div class="education-item">
                                 <h3>{edu.institution}</h3>
@@ -105,7 +135,7 @@ if (profileSummary) {
             {
                 resume.experience.length > 0 && (
                     <section class="experience">
-                        <h2>Experience</h2>
+                        <h2>{labels.experience}</h2>
                         {resume.experience.map((job) => (
                             <div class="experience-item">
                                 <h3>
@@ -131,7 +161,7 @@ if (profileSummary) {
             {
                 resume.skills.length > 0 && (
                     <section class="skills">
-                        <h2>Skills</h2>
+                        <h2>{labels.skills}</h2>
                         <ul class="skills-grid">
                             {resume.skills.map((skill) => (
                                 <li>{skill.name}</li>
@@ -144,7 +174,7 @@ if (profileSummary) {
             {
                 resume.achievements.length > 0 && (
                     <section class="achievements">
-                        <h2>Achievements</h2>
+                        <h2>{labels.achievements}</h2>
                         <ul class="achievements-list">
                             {resume.achievements.map((ach) => (
                                 <li>{ach.text}</li>
@@ -166,7 +196,7 @@ if (profileSummary) {
                     const finalPath =
                         pfp.startsWith("/") || pfp.startsWith("http")
                             ? pfp
-                            : "../../../" + pfp;
+                            : "../../../../" + pfp;
                     img.src = finalPath;
                 }
             }

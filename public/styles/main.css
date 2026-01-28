@@ -33,6 +33,7 @@ body {
     font-weight: 800;
     background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 0 1rem 0;
     letter-spacing: -0.02em;
@@ -45,8 +46,9 @@ body {
     margin: 0 auto;
 }
 
-/* Theme Selector */
-.theme-selector {
+/* Theme & Language Selectors */
+.theme-selector,
+.lang-selector {
     margin-top: 2rem;
     display: inline-flex;
     background: var(--card-bg);
@@ -56,7 +58,12 @@ body {
     gap: 0.5rem;
 }
 
-.theme-btn {
+.lang-selector {
+    margin-left: 1rem;
+}
+
+.theme-btn,
+.lang-btn {
     background: transparent;
     border: none;
     color: var(--text-muted);
@@ -67,7 +74,8 @@ body {
     transition: all 0.2s;
 }
 
-.theme-btn.active {
+.theme-btn.active,
+.lang-btn.active {
     background: var(--primary);
     color: white;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);

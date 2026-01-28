@@ -1,0 +1,740 @@
+{
+    "TEMPLATES": {
+        "experience": {
+            "company": "ชื่อบริษัท",
+            "role": "ตำแหน่งงาน",
+            "startDate": "เดือน ปี",
+            "endDate": "เดือน ปี หรือ ปัจจุบัน",
+            "highlights": [
+                {
+                    "text": "รายละเอียดงานหรือผลลัพธ์",
+                    "tags": [
+                        "technical",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "institution": "ชื่อมหาวิทยาลัย",
+            "area": "สาขาวิชา (ปี-ปี)",
+            "tags": [
+                "education"
+            ]
+        },
+        "skill": {
+            "name": "ชื่อทักษะ",
+            "tags": [
+                "technical",
+                "creative"
+            ]
+        },
+        "achievement": {
+            "text": "รายละเอียดความสำเร็จ รางวัล หรือใบรับรอง",
+            "tags": [
+                "international",
+                "education"
+            ]
+        }
+    },
+    "basics": {
+        "name": "John Cameron Norman (จอห์น คาเมรอน นอร์แมน)",
+        "email": "razodin137@gmail.com",
+        "location": "เชียงราย, ประเทศไทย",
+        "linkedin": "www.linkedin.com/in/kaojaicam",
+        "summary": "นอกเหนือจากงานด้านสร้างสรรค์ ฉันยังเป็นครูสอนภาษาอังกฤษที่ได้รับใบรับรอง (TEFL) และได้สอนนักเรียนในระดับต่างๆ มานานกว่าห้าปี ความหลงใหลในธุรกิจและศรัทธาในพระเจ้าคือแรงขับเคลื่อนสำคัญในการเจริญเติบโตทั้งส่วนตัวและวิชาชีพ ฉันเชื่อว่าการสร้างความมั่งคั่งไม่ใช่เพียงแค่เป้าหมายทางการเงิน แต่คือการเดินทางทางจิตวิญญาณ ฉันมุ่งมั่นที่จะนำภูมิปัญญาที่เป็นอมตะจากคัมภีร์ไบเบิลมาประยุกต์ใช้ในธุรกิจ และมองเห็นสิ่งศักดิ์สิทธิ์ในความธรรมดาสามัญ",
+        "image": "https://ui-avatars.com/api/?name=John+Norman&size=200"
+    },
+    "education": [
+        {
+            "institution": "มหาวิทยาลัยแม่ฟ้าหลวง",
+            "area": "สาขาวิชาภาษาและวัฒนธรรมไทย (2564-2569)",
+            "tags": [
+                "education",
+                "linguistics",
+                "international"
+            ]
+        },
+        {
+            "institution": "Eastern Kentucky University",
+            "area": "สาขาวิชาภาษาและวรรณคดีอังกฤษ (2562-2564)",
+            "highlights": [
+                {
+                    "text": "มีส่วนร่วมอย่างเข้มข้นในองค์กรนักศึกษา กิจกรรมด้านการแสดง และงานองค์กรไม่แสวงหาผลกำไร",
+                    "tags": [
+                        "education",
+                        "creative"
+                    ]
+                },
+                {
+                    "text": "ประสบความสำเร็จในการบริหารจัดการค่าใช้จ่ายมหาวิทยาลัยผ่านทุนการศึกษาต่างๆ จนสร้างผลกำไรจากการเรียน",
+                    "tags": [
+                        "education",
+                        "business"
+                    ]
+                }
+            ],
+            "tags": [
+                "education",
+                "linguistics"
+            ]
+        },
+        {
+            "institution": "มหาวิทยาลัยเชียงใหม่",
+            "area": "ประกาศนียบัตรวิชาชีพครู, TESOL/ESL (2561)",
+            "tags": [
+                "education",
+                "teaching"
+            ]
+        },
+        {
+            "institution": "Lafayette Senior High School",
+            "area": "วุฒิการศึกษามัธยมปลาย (2552-2556)",
+            "tags": [
+                "education"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "company": "Outlier",
+            "role": "Language Quality Evaluator (ผู้ประเมินคุณภาพภาษา)",
+            "startDate": "พฤษภาคม 2567",
+            "endDate": "ปัจจุบัน",
+            "highlights": [
+                {
+                    "text": "ประเมินโมเดลภาษา AI เพื่อความถูกต้องและความปลอดภัยทั้งภาษาอังกฤษและภาษาไทย",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                },
+                {
+                    "text": "วิเคราะห์ด้านภาษาศาสตร์อย่างละเอียดสำหรับบริษัทเทคโนโลยีชั้นนำ รวมถึงโมเดล LLM ของ Google และ OpenAI",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                },
+                {
+                    "text": "ตรวจสอบคำตอบของ AI Chatbot ด้วยตนเองเพื่อการปรับปรุงและความปลอดภัย",
+                    "tags": [
+                        "linguistics",
+                        "technical"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "kaojaicam",
+            "role": "Website Design, Events and Community (ออกแบบเว็บไซต์, กิจกรรมและชุมชน)",
+            "startDate": "ตุลาคม 2564",
+            "endDate": "ปัจจุบัน",
+            "highlights": [
+                {
+                    "text": "ทำหน้าที่เป็น 'Creative Doula' หรือโค้ชช่วยให้ไอเดียใหญ่ๆ เกิดขึ้นจริง ช่วยให้บุคคลเอาชนะความกลัวในการเริ่มต้นงานสร้างสรรค์",
+                    "tags": [
+                        "creative",
+                        "business"
+                    ]
+                },
+                {
+                    "text": "อำนวยความสะดวกในการจัดทำโครงการที่ดูเหมือนยากให้สำเร็จลุล่วงด้วยความยินดี ผ่านการออกแบบและการสนับสนุนจากชุมชน",
+                    "tags": [
+                        "creative",
+                        "technical"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Keeneland Association",
+            "role": "พนักงานผสมเครื่องดื่ม (Bartender)",
+            "startDate": "เมษายน 2562",
+            "endDate": "เมษายน 2562",
+            "highlights": [
+                {
+                    "text": "ให้บริการในช่วงเทศกาลแข่งม้าฤดูใบไม้ผลิของเคนทักกี (ฤดูกาล 3 สัปดาห์)",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "NoLi Artist Space",
+            "role": "ผู้ช่วยสตูดิโอ (Studio Assistant)",
+            "startDate": "พฤษภาคม 2562",
+            "endDate": "ธันวาคม 2562",
+            "highlights": [
+                {
+                    "text": "ช่วยบริหารจัดการพื้นที่สตูดิโอศิลปะร่วมรวมในเมืองเล็กซิงตัน รัฐเคนทักกี",
+                    "tags": [
+                        "creative",
+                        "business"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Kula Eats Vegan Food Truck",
+            "role": "หัวหน้าฝ่ายปฏิบัติการ (Head of Operations)",
+            "startDate": "มิถุนายน 2562",
+            "endDate": "พฤศจิกายน 2562",
+            "highlights": [
+                {
+                    "text": "บริหารจัดการการดำเนินงานของรถขายอาหารมังสวิรัติในภูมิภาคเคนทักกีตอนกลาง",
+                    "tags": [
+                        "business",
+                        "management",
+                        "hospitality"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Mellow Mushroom",
+            "role": "พนักงานเสิร์ฟ",
+            "startDate": "2562",
+            "endDate": "2562",
+            "highlights": [
+                {
+                    "text": "ให้บริการอาหารคุณภาพสูงในร้านอาหารที่มีลูกค้าปริมาณมาก",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Centered Holistic Health",
+            "role": "ผู้ประสานงานศูนย์สุขภาพ / ผู้นำกิจกรรม Sound Bath",
+            "startDate": "มิถุนายน 2562",
+            "endDate": "พฤศจิกายน 2562",
+            "highlights": [
+                {
+                    "text": "ประสานงานด้านหน้า จัดการตารางนัดหมาย และอำนวยความสะดวกในเซสชัน Sound Bath",
+                    "tags": [
+                        "business",
+                        "management",
+                        "service",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "มหาวิทยาลัยเชียงใหม่",
+            "role": "อาจารย์สอนภาษาอังกฤษ",
+            "startDate": "มิถุนายน 2561",
+            "endDate": "พฤศจิกายน 2561",
+            "highlights": [
+                {
+                    "text": "ผู้สอนในมหาวิทยาลัยของรัฐชั้นนำแห่งหนึ่งของประเทศไทย ซึ่งมีหลักสูตรภาษาที่เข้มข้น",
+                    "tags": [
+                        "teaching",
+                        "education",
+                        "international"
+                    ]
+                },
+                {
+                    "text": "ดำรงตำแหน่ง Agent Educator ให้กับทั่วพื้นที่จังหวัดเชียงใหม่",
+                    "tags": [
+                        "teaching",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Alta’s Rustler Lodge",
+            "role": "พนักงานเสิร์ฟ",
+            "startDate": "ธันวาคม 2561",
+            "endDate": "กุมภาพันธ์ 2562",
+            "highlights": [
+                {
+                    "text": "บริการที่โต๊ะอาหารและดูแลความสัมพันธ์กับแขก ณ สกีรีสอร์ทชั้นนำในเมือง Alta รัฐยูทาห์",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "World Merit",
+            "role": "Action Plan Executor (APE)",
+            "startDate": "มกราคม 2560",
+            "endDate": "กันยายน 2560",
+            "highlights": [
+                {
+                    "text": "ดำเนินโครงการแผนปฏิบัติการเพื่อสร้างผลกระทบระดับโลกในกรุงลอนดอน",
+                    "tags": [
+                        "international",
+                        "business",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Pal's Hostel and Pal's Mini",
+            "role": "ฝ่ายปฏิบัติการและตรวจสอบโฮสเทล",
+            "startDate": "2560",
+            "endDate": "2560",
+            "highlights": [
+                {
+                    "text": "ดำเนินการตรวจสอบและสนับสนุนการปฏิบัติงานของโฮสเทลบูติกหลายแห่งในบูดาเปสต์",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Marin Headlands Center For The Arts",
+            "role": "ผู้ช่วยเชฟ (Chef's Assistant)",
+            "startDate": "กุมภาพันธ์ 2560",
+            "endDate": "พฤษภาคม 2560",
+            "highlights": [
+                {
+                    "text": "ร่วมงานโดยตรงกับเชฟ Damon เพื่อจัดทำรายการอาหารพิเศษสำหรับศิลปินในโครงการ",
+                    "tags": [
+                        "hospitality",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International USA",
+            "role": "ฝ่ายต้อนรับ - Marin Headlands",
+            "startDate": "กุมภาพันธ์ 2560",
+            "endDate": "พฤษภาคม 2560",
+            "highlights": [
+                {
+                    "text": "บริหารจัดการงานส่วนหน้าและบริการแขกในเขตภูเขา Marin",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International USA",
+            "role": "ฝ่ายต้อนรับ - Fisherman's Wharf",
+            "startDate": "สิงหาคม 2559",
+            "endDate": "กุมภาพันธ์ 2560",
+            "highlights": [
+                {
+                    "text": "บริหารพื้นที่ส่วนหน้าและงานบริการลูกค้าในโฮสเทลใจกลางเมืองซานฟรานซิสโกที่มีลูกค้าปริมาณมาก",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Kentucky Native Cafe",
+            "role": "พนักงานร้านอาหาร",
+            "startDate": "มิถุนายน 2559",
+            "endDate": "สิงหาคม 2559",
+            "highlights": [
+                {
+                    "text": "งานบริการร้านอาหารตามฤดูกาลในคาเฟ่ในสวนที่มีลูกค้าหนาแน่น",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Common Grounds Coffee",
+            "role": "บาริสต้าและเชฟ",
+            "startDate": "กันยายน 2558",
+            "endDate": "มกราคม 2559",
+            "highlights": [
+                {
+                    "text": "ทำหน้าที่ควบคู่กันทั้งการชงกาแฟและการเตรียมอาหารในครัว",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Breaking Bread Bakery",
+            "role": "พนักงานล้างจาน",
+            "startDate": "ตุลาคม 2557",
+            "endDate": "พฤษภาคม 2558",
+            "highlights": [
+                {
+                    "text": "สนับสนุนงานส่วนหลังที่สำคัญสำหรับร้านเบเกอรี่ท้องถิ่นที่วุ่นวาย",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Hostelling International",
+            "role": "พนักงานโฮสเทล",
+            "startDate": "มีนาคม 2557",
+            "endDate": "มีนาคม 2558",
+            "highlights": [
+                {
+                    "text": "สนับสนุนงานทั่วไปและงานปฏิบัติการสำหรับที่พักแบบประหยัด",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Jeanie Gorrell Floral Design",
+            "role": "ผู้ช่วยจัดดอกไม้และผู้รับเหมา",
+            "startDate": "มิถุนายน 2558",
+            "endDate": "สิงหาคม 2560",
+            "highlights": [
+                {
+                    "text": "รับจ้างจัดงานอีเวนต์ระดับไฮเอนด์ทั่วภูมิภาคเคนทักกีตอนกลาง",
+                    "tags": [
+                        "creative",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "21c Museum Hotels",
+            "role": "พนักงานผสมเครื่องดื่ม (Bartender)",
+            "startDate": "มกราคม 2561",
+            "endDate": "เมษายน 2561",
+            "highlights": [
+                {
+                    "text": "ผสมเครื่องดื่มในโรงแรมสไตล์พิพิธภัณฑ์ระดับหรูที่มีลูกค้าหนาแน่น",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Meze Wine Bar & Bistro",
+            "role": "ผู้ช่วยหัวหน้าเชฟ (Sous Chef)",
+            "startDate": "มิถุนายน 2557",
+            "endDate": "สิงหาคม 2557",
+            "highlights": [
+                {
+                    "text": "เตรียมอาหารเมดิเตอร์เรเนียนคุณภาพสูงในบิสโทรที่มีจังหวะการทำงานรวดเร็ว",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Amazon",
+            "role": "Fulfillment Associate",
+            "startDate": "พฤศจิกายน 2556",
+            "endDate": "ธันวาคม 2556",
+            "highlights": [
+                {
+                    "text": "จัดการคำสั่งซื้อและโลจิสติกส์สินค้าปริมาณมากในช่วงเทศกาลวันหยุดที่มีความต้องการสูงสุด",
+                    "tags": [
+                        "service",
+                        "management"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "งานบูรณะบ้านประวัติศาสตร์",
+            "role": "บำรุงรักษาและบูรณะ",
+            "startDate": "ฤดูร้อน 2558",
+            "endDate": "2560",
+            "highlights": [
+                {
+                    "text": "ดำเนินการบำรุงรักษาและฟื้นฟูคุณสมบัติเก่าของบ้านที่เก่าแก่ที่สุดในเมืองเล็กซิงตัน รัฐเคนทักกี",
+                    "tags": [
+                        "creative",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Red River Gorge Rocktoberfest",
+            "role": "พนักงานจัดงาน / อาสาสมัคร",
+            "startDate": "2554",
+            "endDate": "2556",
+            "highlights": [
+                {
+                    "text": "สนับสนุนการดำเนินงานของงานอีเวนต์และโลจิสติกส์เทศกาลในรัฐเคนทักกี",
+                    "tags": [
+                        "service",
+                        "hospitality"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Oyate Oglala Sioux Reservation",
+            "role": "อาสาสมัครก่อสร้าง",
+            "startDate": "กรกฎาคม 2555",
+            "endDate": "กรกฎาคม 2555",
+            "highlights": [
+                {
+                    "text": "อาสาสมัครในการก่อสร้างโรงเรียนในรัฐเซาท์ดาโคตา",
+                    "tags": [
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "The Buffalo Christian Center",
+            "role": "อาสาสมัครผู้นำทางเด็ก",
+            "startDate": "มิถุนายน 2553",
+            "endDate": "กรกฎาคม 2553",
+            "highlights": [
+                {
+                    "text": "นำกิจกรรมและแนะนำเด็กๆ ในเมืองบัฟฟาโล รัฐนิวยอร์ก",
+                    "tags": [
+                        "service",
+                        "ministry",
+                        "education"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "เทศกาล Crave",
+            "role": "พนักงานจัดงาน",
+            "startDate": "2558",
+            "endDate": "2558",
+            "highlights": [
+                {
+                    "text": "ปฏิบัติหน้าที่หลากหลาย: เจ้าหน้าที่ดูแลเต็นท์นักดนตรี, ฝ่ายขายบัตร และอาสาสมัครทำความสะอาด",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Clos Saron (แลกเปลี่ยนแรงงาน)",
+            "role": "ผู้ช่วยในไร่องุ่น",
+            "startDate": "2557",
+            "endDate": "2557",
+            "highlights": [
+                {
+                    "text": "เข้าร่วมการแลกเปลี่ยนแรงงานเพื่อทำงานในไร่องุ่นในเมือง Oregon House รัฐแคลิฟอร์เนีย",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Bobcat Ridge Avocados (แลกเปลี่ยนแรงงาน)",
+            "role": "ผู้ช่วยในฟาร์ม",
+            "startDate": "2557",
+            "endDate": "2557",
+            "highlights": [
+                {
+                    "text": "แรงงานฝีมือและสนับสนุนงานในฟาร์มในเมืองซานตาครูซ รัฐแคลิฟอร์เนีย",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Gerald's House",
+            "role": "บำรุงรักษาและสนับสนุนทรัพย์สิน",
+            "startDate": "2564",
+            "endDate": "2564",
+            "highlights": [
+                {
+                    "text": "งานบำรุงรักษาและสนับสนุนโลจิสติกส์ในเมืองเล็กซิงตัน รัฐเคนทักกี",
+                    "tags": [
+                        "service"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Helen's Home / Astral Ship",
+            "role": "แลกเปลี่ยนแรงงาน / สนับสนุนชุมชน",
+            "startDate": "2563",
+            "endDate": "2563",
+            "highlights": [
+                {
+                    "text": "แลกเปลี่ยนแรงงานและสร้างชุมชนในเทือกเขา Deiniolen ประเทศเวลส์",
+                    "tags": [
+                        "hospitality",
+                        "service",
+                        "international",
+                        "creative"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Megan/Ben/Awen's House",
+            "role": "แลกเปลี่ยนแรงงาน",
+            "startDate": "2563",
+            "endDate": "2563",
+            "highlights": [
+                {
+                    "text": "สนับสนุนการใช้ชีวิตแบบอนุรักษ์สิ่งแวดล้อมและการบำรุงรักษาในเมือง Machynlleth ประเทศเวลส์",
+                    "tags": [
+                        "service",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Red River Gorgeous",
+            "role": "บำรุงรักษาและทีมปฏิบัติการบ้านพักเคบิน",
+            "startDate": "มิถุนายน 2552",
+            "endDate": "กรกฎาคม 2552",
+            "highlights": [
+                {
+                    "text": "จัดเตรียมบ้านพักและสนับสนุนการดำเนินงานในพื้นที่ Red River Gorge รัฐเคนทักกี",
+                    "tags": [
+                        "hospitality",
+                        "service"
+                    ]
+                }
+            ]
+        }
+    ],
+    "projects": [],
+    "skills": [
+        {
+            "name": "ครูสอนภาษาอังกฤษที่ได้รับใบรับรอง (TEFL Certified Educator)",
+            "tags": [
+                "teaching",
+                "education"
+            ]
+        },
+        {
+            "name": "สองภาษา (Bilingual): อังกฤษและไทย",
+            "tags": [
+                "linguistics",
+                "international"
+            ]
+        },
+        {
+            "name": "การประเมินคุณภาพภาษาสำหรับ AI (AI Language Quality Assessment)",
+            "tags": [
+                "linguistics",
+                "technical"
+            ]
+        },
+        {
+            "name": "การออกแบบเว็บไซต์และ UI/UX (Website Design & UI/UX)",
+            "tags": [
+                "technical",
+                "creative"
+            ]
+        },
+        {
+            "name": "การบริหารจัดการการดำเนินงาน (Operations Management)",
+            "tags": [
+                "business",
+                "management"
+            ]
+        },
+        {
+            "name": "งานบริการและต้อนรับ (Hospitality & Service)",
+            "tags": [
+                "hospitality",
+                "service"
+            ]
+        },
+        {
+            "name": "กลยุทธ์สร้างสรรค์ / การเป็นที่ปรึกษาผลักดันโครงการ (Creative Strategy / Birth Coaching)",
+            "tags": [
+                "creative"
+            ]
+        },
+        {
+            "name": "การประยุกต์ใช้ภูมิปัญญาศาสนศาสตร์ (Biblical Integration)",
+            "tags": [
+                "ministry",
+                "business"
+            ]
+        },
+        {
+            "name": "ความเร็วในการพิมพ์ภาษาอังกฤษเฉลี่ย: 60 WPM (ความแม่นยำ 98%)",
+            "tags": [
+                "technical",
+                "business"
+            ]
+        },
+        {
+            "name": "การพิมพ์ภาษาไทย: 14 WPM (กำลังพัฒนา)",
+            "tags": [
+                "linguistics"
+            ]
+        },
+        {
+            "name": "ความเชี่ยวชาญ Linux และ Windows (GUI และ Terminal)",
+            "tags": [
+                "technical"
+            ]
+        }
+    ],
+    "achievements": [
+        {
+            "text": "แชมป์เปี้ยนและนักพูดยอดเยี่ยม - การแข่งขันโต้โต้วาทีระดับมหาวิทยาลัย (MFU)",
+            "tags": [
+                "education",
+                "international"
+            ]
+        },
+        {
+            "text": "รางวัลที่ 1 - การแข่งขันกราฟิกโนเวล Joseph Beth (Joseph Beth Graphic Novel Competition)",
+            "tags": [
+                "creative"
+            ]
+        },
+        {
+            "text": "เสนอโครงการเพื่อความยั่งยืน ณ สภาขุนนาง (รัฐสภาอังกฤษ) เพื่อเป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ (UN SDGs)",
+            "tags": [
+                "international",
+                "business"
+            ]
+        },
+        {
+            "text": "เดินทางคนเดียวไปยัง 20 ประเทศ โดยหาทุนด้วยตัวเองผ่านงานอาสาสมัคร (WWOOF)",
+            "tags": [
+                "international",
+                "hospitality"
+            ]
+        }
+    ]
+}

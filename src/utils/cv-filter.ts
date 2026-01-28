@@ -7,23 +7,34 @@ function parseDateValue(dateStr: string): number {
     if (!dateStr) return 0;
     const s = dateStr.toLowerCase();
 
-    // "Present" or "Today" is always the newest
-    if (s.includes('present') || s.includes('today')) return new Date().getTime();
+    // "Present" or "Today" or Thai "ปัจจุบัน" is always the newest
+    if (s.includes('present') || s.includes('today') || s.includes('ปัจจุบัน')) return new Date().getTime();
 
     // Try to extract a 4-digit year
     const yearMatch = s.match(/\d{4}/);
     if (!yearMatch) return 0;
-    const year = parseInt(yearMatch[0]);
+    let year = parseInt(yearMatch[0]);
 
-    // Month mapping for strings like "May 2024" or "2019-06-11"
+    // Handle Buddhist Era (BE) years: if year > 2400, it's likely BE (e.g. 2567)
+    // Convert to CE for sorting consistency
+    if (year > 2400) {
+        year -= 543;
+    }
+
+    // Month mapping (English and Thai)
     const months: Record<string, number> = {
         jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
-        jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11
+        jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
+        // Thai Months
+        "ม.ค.": 0, "ก.พ.": 1, "มี.ค.": 2, "เม.ย.": 3, "พ.ค.": 4, "มิ.ย.": 5,
+        "ก.ค.": 6, "ส.ค.": 7, "ก.ย.": 8, "ต.ค.": 9, "พ.ย.": 10, "ธ.ค.": 11,
+        "มกราคม": 0, "กุมภาพันธ์": 1, "มีนาคม": 2, "เมษายน": 3, "พฤษภาคม": 4, "มิถุนายน": 5,
+        "กรกฎาคม": 6, "สิงหาคม": 7, "กันยายน": 8, "ตุลาคม": 9, "พฤศจิกายน": 10, "ธันวาคม": 11
     };
 
     let month = 0;
     for (const [m, val] of Object.entries(months)) {
-        if (s.includes(m)) {
+        if (s.includes(m.toLowerCase())) {
             month = val;
             break;
         }

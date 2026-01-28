@@ -72,6 +72,15 @@ const profiles = profilesRaw as {
           >
         </div>
 
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en" onclick="setLang('en')"
+            >English</button
+          >
+          <button class="lang-btn" data-lang="th" onclick="setLang('th')"
+            >Thai</button
+          >
+        </div>
+
         <div class="pfp-section" style="margin-top: 2.5rem;">
           <label
             style="color: var(--text-muted); font-size: 0.875rem; display: block; margin-bottom: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;"
@@ -120,7 +129,7 @@ const profiles = profilesRaw as {
                 ))}
               </div>
               <a
-                href={`resume/classic/${profile.slug}/index.html`}
+                href={`resume/en/classic/${profile.slug}/index.html`}
                 class="btn generate-btn"
                 data-slug={profile.slug}
               >
@@ -146,6 +155,7 @@ const profiles = profilesRaw as {
     <script is:inline>
       let currentTheme = localStorage.getItem("resume-theme") || "classic";
       let currentPFP = localStorage.getItem("resume-pfp") || "";
+      let currentLang = localStorage.getItem("resume-lang") || "en";
 
       function setTheme(theme) {
         currentTheme = theme;
@@ -154,6 +164,15 @@ const profiles = profilesRaw as {
         });
         updateLinks();
         localStorage.setItem("resume-theme", theme);
+      }
+
+      function setLang(lang) {
+        currentLang = lang;
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+        updateLinks();
+        localStorage.setItem("resume-lang", lang);
       }
 
       function setPFP(pfp) {
@@ -169,7 +188,7 @@ const profiles = profilesRaw as {
         document.querySelectorAll(".generate-btn").forEach((btn) => {
           const slug = btn.dataset.slug;
           // Use relative path and append index.html for file:// compatibility
-          let href = `resume/${currentTheme}/${slug}/index.html`;
+          let href = `resume/${currentLang}/${currentTheme}/${slug}/index.html`;
           if (currentPFP) {
             href += `?pfp=${encodeURIComponent(currentPFP)}`;
           }
@@ -180,6 +199,7 @@ const profiles = profilesRaw as {
       // Initialize items
       setPFP(currentPFP);
       setTheme(currentTheme);
+      setLang(currentLang);
     </script>
   </body>
 </html>
