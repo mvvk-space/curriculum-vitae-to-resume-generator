@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "astro": "4.5.18"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10"
   }
 }

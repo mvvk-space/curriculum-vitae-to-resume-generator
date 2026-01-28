@@ -2,8 +2,24 @@
 import profilesRaw from "../data/profiles.json";
 import masterCVRaw from "../data/master-cv.json";
 import type { MasterCV } from "../types/cv";
+import fs from "node:fs";
+import path from "node:path";
 
 const masterCV = masterCVRaw as MasterCV;
+
+// Get all profiles images from public/images/profiles
+const profilePicsDir = path.join(process.cwd(), "public", "images", "profiles");
+let profilePics: string[] = [];
+try {
+  if (!fs.existsSync(profilePicsDir)) {
+    fs.mkdirSync(profilePicsDir, { recursive: true });
+  }
+  profilePics = fs
+    .readdirSync(profilePicsDir)
+    .filter((file) => /\.(jpg|jpeg|png|webp|avif|svg)$/i.test(file));
+} catch (e) {
+  console.error("Error reading profile pics:", e);
+}
 
 // Get all unique tags from the master CV for the UI
 const allTags = new Set<string>();
@@ -50,6 +66,25 @@ const profiles = profilesRaw as {
             onclick="setTheme('modern')">Modern</button
           >
         </div>
+
+        <div class="pfp-selector" style="margin-top: 1.5rem;">
+          <label
+            style="color: var(--text-muted); font-size: 0.875rem; margin-right: 1rem; font-weight: 600;"
+            >PROFILE PICTURE:</label
+          >
+          <select
+            id="pfp-select"
+            onchange="setPFP(this.value)"
+            style="background: var(--card-bg); color: var(--text); border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 9999px; outline: none; cursor: pointer; font-weight: 600;"
+          >
+            <option value="">Default (Master CV)</option>
+            {
+              profilePics.map((pic) => (
+                <option value={`/images/profiles/${pic}`}>{pic}</option>
+              ))
+            }
+          </select>
+        </div>
       </div>
 
       <div class="grid">
@@ -87,27 +122,39 @@ const profiles = profilesRaw as {
     </div>
 
     <script is:inline>
+      let currentTheme = localStorage.getItem("resume-theme") || "classic";
+      let currentPFP = localStorage.getItem("resume-pfp") || "";
+
       function setTheme(theme) {
+        currentTheme = theme;
         // Update buttons
         document.querySelectorAll(".theme-btn").forEach((btn) => {
           btn.classList.toggle("active", btn.dataset.theme === theme);
         });
-
-        // Update links
-        document.querySelectorAll(".generate-btn").forEach((btn) => {
-          const slug = btn.dataset.slug;
-          btn.href = `/resume/${theme}/${slug}`;
-        });
-
-        // Save preference
+        updateLinks();
         localStorage.setItem("resume-theme", theme);
       }
 
-      // Load preference
-      const savedTheme = localStorage.getItem("resume-theme");
-      if (savedTheme) {
-        setTheme(savedTheme);
+      function setPFP(pfp) {
+        currentPFP = pfp;
+        updateLinks();
+        localStorage.setItem("resume-pfp", pfp);
       }
+
+      function updateLinks() {
+        document.querySelectorAll(".generate-btn").forEach((btn) => {
+          const slug = btn.dataset.slug;
+          let href = `/resume/${currentTheme}/${slug}`;
+          if (currentPFP) {
+            href += `?pfp=${encodeURIComponent(currentPFP)}`;
+          }
+          btn.href = href;
+        });
+      }
+
+      // Initialize
+      document.getElementById("pfp-select").value = currentPFP;
+      setTheme(currentTheme);
     </script>
   </body>
 </html>

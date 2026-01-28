@@ -58,6 +58,7 @@ const resume = filterCV(masterCV as MasterCV, tags);
                 resume.basics.image && (
                     <div class="profile-picture">
                         <img
+                            id="resume-pfp"
                             src={resume.basics.image}
                             alt={resume.basics.name}
                         />
@@ -149,5 +150,17 @@ const resume = filterCV(masterCV as MasterCV, tags);
                 )
             }
         </main>
+
+        <script is:inline>
+            // Check for pfp override in URL
+            const params = new URLSearchParams(window.location.search);
+            const pfp = params.get("pfp");
+            if (pfp) {
+                const img = document.getElementById("resume-pfp");
+                if (img) {
+                    img.src = pfp;
+                }
+            }
+        </script>
     </body>
 </html>
