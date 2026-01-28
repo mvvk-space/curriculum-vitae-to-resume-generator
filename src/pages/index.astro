@@ -67,23 +67,40 @@ const profiles = profilesRaw as {
           >
         </div>
 
-        <div class="pfp-selector" style="margin-top: 1.5rem;">
+        <div class="pfp-section" style="margin-top: 2.5rem;">
           <label
-            style="color: var(--text-muted); font-size: 0.875rem; margin-right: 1rem; font-weight: 600;"
-            >PROFILE PICTURE:</label
+            style="color: var(--text-muted); font-size: 0.875rem; display: block; margin-bottom: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;"
+            >Selected Identity</label
           >
-          <select
-            id="pfp-select"
-            onchange="setPFP(this.value)"
-            style="background: var(--card-bg); color: var(--text); border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 9999px; outline: none; cursor: pointer; font-weight: 600;"
+          <div
+            class="pfp-gallery"
+            style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;"
           >
-            <option value="">Default (Master CV)</option>
+            <div
+              class="pfp-item active"
+              data-pfp=""
+              onclick="setPFP('')"
+              title="Default"
+            >
+              <div class="pfp-frame">
+                <div class="pfp-placeholder">👤</div>
+              </div>
+            </div>
             {
               profilePics.map((pic) => (
-                <option value={`/images/profiles/${pic}`}>{pic}</option>
+                <div
+                  class="pfp-item"
+                  data-pfp={`/images/profiles/${pic}`}
+                  onclick={`setPFP('/images/profiles/${pic}')`}
+                  title={pic}
+                >
+                  <div class="pfp-frame">
+                    <img src={`/images/profiles/${pic}`} alt={pic} />
+                  </div>
+                </div>
               ))
             }
-          </select>
+          </div>
         </div>
       </div>
 
@@ -127,7 +144,6 @@ const profiles = profilesRaw as {
 
       function setTheme(theme) {
         currentTheme = theme;
-        // Update buttons
         document.querySelectorAll(".theme-btn").forEach((btn) => {
           btn.classList.toggle("active", btn.dataset.theme === theme);
         });
@@ -137,6 +153,9 @@ const profiles = profilesRaw as {
 
       function setPFP(pfp) {
         currentPFP = pfp;
+        document.querySelectorAll(".pfp-item").forEach((item) => {
+          item.classList.toggle("active", (item.dataset.pfp || "") === pfp);
+        });
         updateLinks();
         localStorage.setItem("resume-pfp", pfp);
       }
@@ -152,8 +171,8 @@ const profiles = profilesRaw as {
         });
       }
 
-      // Initialize
-      document.getElementById("pfp-select").value = currentPFP;
+      // Initialize items
+      setPFP(currentPFP);
       setTheme(currentTheme);
     </script>
   </body>
