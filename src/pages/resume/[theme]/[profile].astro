@@ -5,7 +5,7 @@ import { filterCV } from "../../../utils/cv-filter";
 import type { MasterCV } from "../../../types/cv";
 
 export function getStaticPaths() {
-    const themes = ["classic", "modern"];
+    const themes = ["classic", "modern", "neobrutal"];
 
     return themes.flatMap((theme) =>
         profiles.map((profile) => ({
