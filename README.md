@@ -5,7 +5,8 @@ A powerful, highly-customizable resume generator built with **Astro**. Generate 
 ## ✨ Features
 
 -   **🎯 Multi-Profile Generation**: Create specific CV versions (Teaching, Technical, Business, etc.) from one `master-cv.json`.
--   **🎨 Dynamic Themes**: Switch between multiple professional styles in real-time.
+-   **�🇭 Multilingual Support**: Seamlessly switch between English and Thai resume versions, including localized date formats and headers.
+-   **�🎨 Dynamic Themes**: Switch between multiple professional styles in real-time.
 -   **🖼️ Identity Gallery**: Drag-and-drop profile pictures and select them from a visual gallery.
 -   **📄 PDF Ready**: Optimized for "Print to PDF" with letter-size formatting and high-fidelity layouts.
 -   **⚡ Built with Astro**: Ultra-fast static site generation.
@@ -56,6 +57,14 @@ A sleek sidebar layout with emerald accents and professional spacing.
 ### 🤘 NeoBrutal Theme
 A bold, high-contrast design for creative and technical roles. Thick borders, bright colors, and hard shadows.
 ![NeoBrutal Resume](public/screenshots/resume_neobrutal.png)
+
+## 🇹🇭 Thai Language Support
+
+The engine supports full Thai localization. 
+-   **Data Source**: Edit `src/data/master-cv-th.json` for Thai content.
+-   **Templates**: Use `src/data/TEMPLATES-TH.md` for pre-translated Thai snippets.
+-   **Smart Localization**: Automatically handles Buddhist Era (BE) year conversion and Thai month names.
+-   **Toggle**: Use the language switcher on the dashboard to update all resume paths to `/th/`.
 
 ---
 
