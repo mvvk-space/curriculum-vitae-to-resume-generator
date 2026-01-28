@@ -40,6 +40,7 @@ export interface CVBasics {
     location: string;
     summary?: string;
     image?: string;
+    linkedin?: string;
 }
 
 export interface MasterCV {

@@ -1,0 +1,242 @@
+:root {
+    --primary: #059669;
+    --primary-dark: #047857;
+    --sidebar-bg: #111827;
+    --sidebar-text: #f9fafb;
+    --content-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@page {
+    size: letter;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background: #f3f4f6;
+    min-height: 11in;
+    display: flex;
+    justify-content: center;
+}
+
+/* Page Container */
+.page-wrap {
+    width: 8.5in;
+    min-height: 11in;
+    background: white;
+    display: grid;
+    grid-template-columns: 2.8in 1fr;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Actually, the current HTML has header and main as siblings. 
+   So I will use the body directly or style those two. */
+
+body {
+    display: grid;
+    grid-template-columns: 2.8in 1fr;
+    width: 8.5in;
+    margin: 0 auto;
+    background: white;
+}
+
+/* Sidebar */
+header {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header h1 {
+    font-size: 24pt;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: -0.025em;
+}
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 9pt;
+    margin-top: 20px;
+}
+
+.contact span {
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+}
+
+/* Move skills to sidebar in Modern theme */
+/* We need to re-target .skills if we want them in sidebar, 
+   but they are in <main>. I'll style them to look good in <main> for now 
+   unless I change HTML. But let's stick to the structure. */
+
+/* Main Content */
+main {
+    padding: 40px 50px;
+    background: white;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h2::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+h3 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.date {
+    float: right;
+    font-size: 9pt;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: #f3f4f6;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-top: 4px;
+}
+
+.company,
+.institution {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.summary p {
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #374151;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-grid li {
+    padding: 4px 12px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 9pt;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.skills-grid li::before {
+    display: none;
+}
+
+.achievements-list li::before {
+    content: "★";
+}
+
+/* Print UI */
+.print-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--sidebar-bg);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@media print {
+    body {
+        width: 100% !important;
+        margin: 0 !important;
+        display: grid !important;
+        grid-template-columns: 2.8in 1fr !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .print-button {
+        display: none;
+    }
+}

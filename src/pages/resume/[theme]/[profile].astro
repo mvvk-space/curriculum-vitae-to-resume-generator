@@ -1,0 +1,153 @@
+---
+import masterCV from "../../../data/master-cv.json";
+import profiles from "../../../data/profiles.json";
+import { filterCV } from "../../../utils/cv-filter";
+import type { MasterCV } from "../../../types/cv";
+
+export function getStaticPaths() {
+    const themes = ["classic", "modern"];
+
+    return themes.flatMap((theme) =>
+        profiles.map((profile) => ({
+            params: {
+                theme: theme,
+                profile: profile.slug,
+            },
+            props: {
+                tags: profile.tags,
+                profileName: profile.title,
+                theme: theme,
+            },
+        })),
+    );
+}
+
+const { tags, profileName, theme } = Astro.props;
+const { profile } = Astro.params;
+
+const resume = filterCV(masterCV as MasterCV, tags);
+---
+
+<link rel="stylesheet" href={`/src/styles/themes/${theme}.css`} />
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{resume.basics.name} - {profileName}</title>
+    </head>
+    <body>
+        <button class="print-button" onclick="window.print()"
+            >Print / Save as PDF</button
+        >
+
+        <header>
+            <div class="info">
+                <h1>{resume.basics.name}</h1>
+                <div class="contact">
+                    <span>{resume.basics.location}</span>
+                    <span>{resume.basics.email}</span>
+                    {
+                        resume.basics.linkedin && (
+                            <span>{resume.basics.linkedin}</span>
+                        )
+                    }
+                </div>
+            </div>
+            {
+                resume.basics.image && (
+                    <div class="profile-picture">
+                        <img
+                            src={resume.basics.image}
+                            alt={resume.basics.name}
+                        />
+                    </div>
+                )
+            }
+        </header>
+
+        <main>
+            {
+                resume.basics.summary && (
+                    <section class="summary">
+                        <p>{resume.basics.summary}</p>
+                    </section>
+                )
+            }
+
+            {
+                resume.education.length > 0 && (
+                    <section class="education">
+                        <h2>Education</h2>
+                        {resume.education.map((edu) => (
+                            <div class="education-item">
+                                <h3>{edu.institution}</h3>
+                                <p>{edu.area}</p>
+                                {edu.highlights &&
+                                    edu.highlights.length > 0 && (
+                                        <ul>
+                                            {edu.highlights.map((h) => (
+                                                <li>{h.text}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                            </div>
+                        ))}
+                    </section>
+                )
+            }
+
+            {
+                resume.experience.length > 0 && (
+                    <section class="experience">
+                        <h2>Experience</h2>
+                        {resume.experience.map((job) => (
+                            <div class="experience-item">
+                                <h3>
+                                    {job.role}{" "}
+                                    <span class="date">
+                                        {job.startDate}–{job.endDate}
+                                    </span>
+                                </h3>
+                                {job.company && (
+                                    <p class="company">{job.company}</p>
+                                )}
+                                <ul>
+                                    {job.highlights.map((point) => (
+                                        <li>{point.text}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </section>
+                )
+            }
+
+            {
+                resume.skills.length > 0 && (
+                    <section class="skills">
+                        <h2>Skills</h2>
+                        <ul class="skills-grid">
+                            {resume.skills.map((skill) => (
+                                <li>{skill.name}</li>
+                            ))}
+                        </ul>
+                    </section>
+                )
+            }
+
+            {
+                resume.achievements.length > 0 && (
+                    <section class="achievements">
+                        <h2>Achievements</h2>
+                        <ul class="achievements-list">
+                            {resume.achievements.map((ach) => (
+                                <li>{ach.text}</li>
+                            ))}
+                        </ul>
+                    </section>
+                )
+            }
+        </main>
+    </body>
+</html>
