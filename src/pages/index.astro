@@ -42,7 +42,7 @@ const profiles = profilesRaw as {
   <head>
     <meta charset="utf-8" />
     <title>Resume Engine Dashboard</title>
-    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -95,12 +95,12 @@ const profiles = profilesRaw as {
               profilePics.map((pic) => (
                 <div
                   class="pfp-item"
-                  data-pfp={`/images/profiles/${pic}`}
-                  onclick={`setPFP('/images/profiles/${pic}')`}
+                  data-pfp={`images/profiles/${pic}`}
+                  onclick={`setPFP('images/profiles/${pic}')`}
                   title={pic}
                 >
                   <div class="pfp-frame">
-                    <img src={`/images/profiles/${pic}`} alt={pic} />
+                    <img src={`images/profiles/${pic}`} alt={pic} />
                   </div>
                 </div>
               ))
@@ -120,7 +120,7 @@ const profiles = profilesRaw as {
                 ))}
               </div>
               <a
-                href={`/resume/classic/${profile.slug}`}
+                href={`resume/classic/${profile.slug}/index.html`}
                 class="btn generate-btn"
                 data-slug={profile.slug}
               >
@@ -168,7 +168,8 @@ const profiles = profilesRaw as {
       function updateLinks() {
         document.querySelectorAll(".generate-btn").forEach((btn) => {
           const slug = btn.dataset.slug;
-          let href = `/resume/${currentTheme}/${slug}`;
+          // Use relative path and append index.html for file:// compatibility
+          let href = `resume/${currentTheme}/${slug}/index.html`;
           if (currentPFP) {
             href += `?pfp=${encodeURIComponent(currentPFP)}`;
           }

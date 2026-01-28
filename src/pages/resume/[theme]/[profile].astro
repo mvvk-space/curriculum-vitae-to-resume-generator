@@ -32,7 +32,7 @@ if (profileSummary) {
 }
 ---
 
-<link rel="stylesheet" href={`/src/styles/themes/${theme}.css`} />
+<link rel="stylesheet" href={`../../../styles/themes/${theme}.css`} />
 
 <html lang="en">
     <head>
@@ -162,7 +162,12 @@ if (profileSummary) {
             if (pfp) {
                 const img = document.getElementById("resume-pfp");
                 if (img) {
-                    img.src = pfp;
+                    // Handle relative paths for static file protocol
+                    const finalPath =
+                        pfp.startsWith("/") || pfp.startsWith("http")
+                            ? pfp
+                            : "../../../" + pfp;
+                    img.src = finalPath;
                 }
             }
         </script>
