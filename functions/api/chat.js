@@ -18,12 +18,12 @@ export async function onRequest(context) {
         );
     }
 
-    // 0. Check if AI binding exists
-    if (!context.env.AI) {
-        throw new Error(`AI binding contains no value. Available env keys: ${Object.keys(context.env).join(", ")}`);
-    }
-
     try {
+        // 0. Check if AI binding exists
+        if (!context.env.AI) {
+            throw new Error(`AI binding contains no value. Available env keys: ${Object.keys(context.env).join(", ")}`);
+        }
+
         // 1. Get the customer's message from the request
         const { message } = await context.request.json();
 
