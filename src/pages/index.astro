@@ -4,7 +4,7 @@ import masterCVRaw from "../data/master-cv.json";
 import type { MasterCV } from "../types/cv";
 import fs from "node:fs";
 import path from "node:path";
-import ChatWidget from "../components/ChatWidget.astro";
+
 
 const masterCV = masterCVRaw as MasterCV;
 
@@ -200,6 +200,6 @@ const profiles = profilesRaw as {
       setTheme(currentTheme);
       setLang(currentLang);
     </script>
-    <ChatWidget />
+
   </body>
 </html>

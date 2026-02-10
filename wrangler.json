@@ -4,7 +4,4 @@
     "assets": {
         "directory": "./dist"
     },
-    "ai": {
-        "binding": "AI"
-    }
 }
