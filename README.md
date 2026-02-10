@@ -1,6 +1,6 @@
 # 🚀 Resume Engine
 
-A powerful, highly-customizable resume generator built with **Astro**. Generate tailored resumes for different roles from a single Master CV data source using advanced tag-based filtering.
+A powerful, highly-customizable resume generator. Generate tailored resumes for different roles from a single Master CV data source using advanced tag-based filtering.
 
 ## ✨ Features
 
