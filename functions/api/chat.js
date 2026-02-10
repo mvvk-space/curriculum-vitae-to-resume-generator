@@ -65,7 +65,7 @@ export async function onRequest(context) {
     } catch (err) {
         console.error("Chat API error:", err);
         return Response.json(
-            { error: "Something went wrong. Please try again." },
+            { error: "Something went wrong. Please try again.", details: err.message, stack: err.stack },
             { status: 500 }
         );
     }
