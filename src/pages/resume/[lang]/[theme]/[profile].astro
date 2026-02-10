@@ -78,6 +78,9 @@ const labels = {
             :root[lang="th"] body {
                 font-family: 'Sarabun', sans-serif;
             }
+            .hide-pfp .profile-picture {
+                display: none !important;
+            }
         </style>
     </head>
     <body>
@@ -199,7 +202,10 @@ const labels = {
             // Check for pfp override in URL
             const params = new URLSearchParams(window.location.search);
             const pfp = params.get("pfp");
-            if (pfp) {
+            
+            if (pfp === "none") {
+                document.body.classList.add("hide-pfp");
+            } else if (pfp) {
                 const img = document.getElementById("resume-pfp");
                 if (img) {
                     // Handle relative paths for static file protocol

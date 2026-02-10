@@ -92,12 +92,12 @@ const profiles = profilesRaw as {
           >
             <div
               class="pfp-item active"
-              data-pfp=""
-              onclick="setPFP('')"
-              title="Default"
+              data-pfp="none"
+              onclick="setPFP('none')"
+              title="No Profile Picture"
             >
               <div class="pfp-frame">
-                <div class="pfp-placeholder">👤</div>
+                <div class="pfp-placeholder">🚫</div>
               </div>
             </div>
             {
@@ -154,7 +154,7 @@ const profiles = profilesRaw as {
 
     <script is:inline>
       let currentTheme = localStorage.getItem("resume-theme") || "classic";
-      let currentPFP = localStorage.getItem("resume-pfp") || "";
+      let currentPFP = localStorage.getItem("resume-pfp") || "none";
       let currentLang = localStorage.getItem("resume-lang") || "en";
 
       function setTheme(theme) {
@@ -178,7 +178,7 @@ const profiles = profilesRaw as {
       function setPFP(pfp) {
         currentPFP = pfp;
         document.querySelectorAll(".pfp-item").forEach((item) => {
-          item.classList.toggle("active", (item.dataset.pfp || "") === pfp);
+          item.classList.toggle("active", (item.dataset.pfp || "none") === pfp);
         });
         updateLinks();
         localStorage.setItem("resume-pfp", pfp);
