@@ -69,16 +69,23 @@ export function filterCV(cv: MasterCV, targetTags: string[]): MasterCV {
         proj.tags.some(tag => targetTags.includes(tag))
     );
 
-    // 3. Keep All Education and Sort (Newest First)
-    filtered.education = (filtered.education || []).sort((a, b) => parseDateValue(b.area) - parseDateValue(a.area));
+    // 3. Filter Education and Sort (Newest First)
+    filtered.education = (filtered.education || [])
+        .filter(edu =>
+            // If education has no tags, keep it (assume general). If it has tags, check for match.
+            !edu.tags || edu.tags.length === 0 || edu.tags.some(tag => targetTags.includes(tag))
+        )
+        .sort((a, b) => parseDateValue(b.area) - parseDateValue(a.area));
 
     // 4. Filter Skills
     filtered.skills = (filtered.skills || []).filter(skill =>
         skill.tags.some(tag => targetTags.includes(tag))
     );
 
-    // 5. Keep All Achievements
-    filtered.achievements = (filtered.achievements || []);
+    // 5. Filter Achievements
+    filtered.achievements = (filtered.achievements || []).filter(ach =>
+        !ach.tags || ach.tags.length === 0 || ach.tags.some(tag => targetTags.includes(tag))
+    );
 
     return filtered;
 

@@ -4,12 +4,15 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "npm run validate && astro build",
     "preview": "astro preview",
+    "validate": "npx tsx src/scripts/validate-cv.ts",
+    "deploy": "npm run build && npx wrangler deploy --assets ./dist --name resume --compatibility-date 2025-02-10",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "4.5.18"
+    "astro": "^5.17.1"
   },
   "devDependencies": {
     "@types/node": "^25.0.10"

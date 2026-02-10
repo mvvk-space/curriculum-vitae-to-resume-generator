@@ -39,7 +39,7 @@
     },
     "basics": {
         "name": "John Cameron Norman",
-        "email": "razodin137@gmail.com",
+        "email": "6431005001@lamduan.mfu.ac.th",
         "location": "Chiang Rai, Thailand",
         "linkedin": "www.linkedin.com/in/kaojaicam",
         "summary": "In addition to my creative work, I am also a certified teacher of English as a foreign language (TEFL), and I have been tutoring students of various ages and levels for more than five years. My passion for business and God drives my personal and professional growth. I believe that creating wealth is not only a financial goal, but also a spiritual journey. I seek to apply the timeless wisdom and insights of the Bible to my business endeavors, and to see the divine in the ordinary.",
@@ -49,6 +49,14 @@
         {
             "institution": "Mae Fah Luang University",
             "area": "Thai Language and Culture (2021-2026)",
+            "highlights": [
+                {
+                    "text": "Full-time scholar specializing in Thai language and cultural studies.",
+                    "tags": [
+                        "education"
+                    ]
+                }
+            ],
             "tags": [
                 "education",
                 "linguistics",
@@ -97,10 +105,26 @@
     ],
     "experience": [
         {
+            "company": "Mae Fah Luang University",
+            "role": "Thai Language and Culture",
+            "startDate": "May 2021",
+            "endDate": "Present",
+            "highlights": [
+                {
+                    "text": "Full-time scholar specializing in Thai language and cultural studies.",
+                    "tags": [
+                        "education",
+                        "linguistics",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
             "company": "Outlier",
             "role": "Language Quality Evaluator",
             "startDate": "May 2024",
-            "endDate": "Present",
+            "endDate": "December 2024",
             "highlights": [
                 {
                     "text": "Evaluate AI language models for accuracy and safety in both English and Thai.",
@@ -274,7 +298,8 @@
                     "tags": [
                         "international",
                         "business",
-                        "management"
+                        "management",
+                        "education"
                     ]
                 }
             ]
@@ -503,7 +528,9 @@
                     "text": "Volunteered in the construction of a school in South Dakota.",
                     "tags": [
                         "service",
-                        "international"
+                        "international",
+                        "ministry",
+                        "education"
                     ]
                 }
             ]
@@ -726,7 +753,8 @@
             "text": "Sustainability project proposal at The House of Lords (British Parliament) for UN SDGs",
             "tags": [
                 "international",
-                "business"
+                "business",
+                "education"
             ]
         },
         {
