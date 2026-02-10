@@ -66,6 +66,9 @@ The engine supports full Thai localization.
 -   **Smart Localization**: Automatically handles Buddhist Era (BE) year conversion and Thai month names.
 -   **Toggle**: Use the language switcher on the dashboard to update all resume paths to `/th/`.
 
+### 🔄 Translation Workflow
+Adding Thai translation will require manual input. However, fields like "tags, company, start and end date" will be shared between the Thai and English versions and be handled automatically by the build.
+
 ---
 
 ## 🚀 Getting Started

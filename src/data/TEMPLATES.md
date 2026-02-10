@@ -4,6 +4,8 @@ Copy and paste these snippets directly into your `master-cv.json` file.
 
 ⚠️ **IMPORTANT**: Remember to add a comma (`,`) between items if you are adding more than one!
 
+Adding Thai translation will require manual input. However, fields like "tags, company, start and end date" will be shared between the Thai and English versions and be handled automatically by the build.
+
 ---
 
 ### 💼 Work Experience
