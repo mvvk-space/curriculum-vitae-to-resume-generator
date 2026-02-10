@@ -18,12 +18,12 @@ export async function onRequest(context) {
         );
     }
 
-    try {
-        // 0. Check if AI binding exists
-        if (!context.env.AI) {
-            throw new Error(`AI binding contains no value. Available env keys: ${Object.keys(context.env).join(", ")}`);
-        }
+    // 0. Check if AI binding exists
+    if (!context.env.AI) {
+        throw new Error("AI binding is not configured.");
+    }
 
+    try {
         // 1. Get the customer's message from the request
         const { message } = await context.request.json();
 
@@ -70,7 +70,7 @@ export async function onRequest(context) {
     } catch (err) {
         console.error("Chat API error:", err);
         return Response.json(
-            { error: "Something went wrong. Please try again.", details: err.message, stack: err.stack },
+            { error: "Service temporarily unavailable.", details: err.message },
             { status: 500 }
         );
     }
