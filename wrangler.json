@@ -3,5 +3,8 @@
     "compatibility_date": "2025-02-10",
     "assets": {
         "directory": "./dist"
+    },
+    "ai": {
+        "binding": "AI"
     }
 }
