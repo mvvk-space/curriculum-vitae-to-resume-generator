@@ -10,6 +10,17 @@
         ]
     },
     {
+        "slug": "teaching-child",
+        "title": "Teaching & Child Education",
+        "summary": "Dedicated educator focused on child development and language acquisition. Certified TEFL teacher with specialized experience in guiding young learners and fostering a supportive educational environment.",
+        "tags": [
+            "teaching",
+            "education",
+            "ministry",
+            "linguistics"
+        ]
+    },
+    {
         "slug": "technical",
         "title": "Technical & AI Quality",
         "summary": "Language Quality Evaluator specialized in AI model assessment for English and Thai. Expert in linguistic analysis for LLMs, combining technical proficiency in Linux environments with advanced bilingual communication skills.",

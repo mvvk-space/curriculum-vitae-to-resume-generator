@@ -29,9 +29,11 @@ export function getStaticPaths() {
     );
 }
 
+import { mergeCV } from "../../../../utils/cv-merger";
+
 const { tags, profileName, profileSummary, theme, lang } = Astro.props;
 
-const masterCV = lang === "th" ? masterCVTh : masterCVEn;
+const masterCV = lang === "th" ? mergeCV(masterCVEn as MasterCV, masterCVTh as unknown as Partial<MasterCV>) : masterCVEn;
 const resume = filterCV(masterCV as MasterCV, tags);
 
 if (profileSummary) {
@@ -69,6 +71,14 @@ const labels = {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>{resume.basics.name} - {profileName}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            :root[lang="th"] body {
+                font-family: 'Sarabun', sans-serif;
+            }
+        </style>
     </head>
     <body>
         <button class="print-button" onclick="window.print()"

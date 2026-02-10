@@ -97,10 +97,26 @@
     ],
     "experience": [
         {
+            "company": "Mae Fah Luang University",
+            "role": "Thai Language and Culture Scholar",
+            "startDate": "May 2021",
+            "endDate": "Present",
+            "highlights": [
+                {
+                    "text": "Full-time scholar specializing in Thai language and cultural studies.",
+                    "tags": [
+                        "education",
+                        "linguistics",
+                        "international"
+                    ]
+                }
+            ]
+        },
+        {
             "company": "Outlier",
             "role": "Language Quality Evaluator",
             "startDate": "May 2024",
-            "endDate": "Present",
+            "endDate": "December 2024",
             "highlights": [
                 {
                     "text": "Evaluate AI language models for accuracy and safety in both English and Thai.",
@@ -274,7 +290,8 @@
                     "tags": [
                         "international",
                         "business",
-                        "management"
+                        "management",
+                        "education"
                     ]
                 }
             ]
@@ -503,7 +520,9 @@
                     "text": "Volunteered in the construction of a school in South Dakota.",
                     "tags": [
                         "service",
-                        "international"
+                        "international",
+                        "ministry",
+                        "education"
                     ]
                 }
             ]
@@ -726,7 +745,8 @@
             "text": "Sustainability project proposal at The House of Lords (British Parliament) for UN SDGs",
             "tags": [
                 "international",
-                "business"
+                "business",
+                "education"
             ]
         },
         {
