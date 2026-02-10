@@ -59,6 +59,20 @@ export function mergeCV(english: MasterCV, thai: Partial<MasterCV>): MasterCV {
             // if (thaiEdu.studyType) newEdu.studyType = thaiEdu.studyType; // Property 'studyType' does not exist on type 'CVEducation'
             // Keep English dates and tags
 
+            // Merge Highlights
+            if (thaiEdu.highlights) {
+                newEdu.highlights = engEdu.highlights?.map((engH, j) => {
+                    const thaiH = thaiEdu.highlights?.[j];
+                    if (!thaiH) return engH;
+
+                    return {
+                        ...engH,
+                        text: thaiH.text || engH.text,
+                        // Tags strictly from English
+                    };
+                });
+            }
+
             return newEdu;
         });
     }

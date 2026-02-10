@@ -8,6 +8,7 @@
     "build": "npm run validate && astro build",
     "preview": "astro preview",
     "validate": "bun src/scripts/validate-cv.ts",
+    "deploy": "npm run build && npx wrangler deploy",
     "astro": "astro"
   },
   "dependencies": {
