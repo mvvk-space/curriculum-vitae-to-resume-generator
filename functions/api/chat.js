@@ -47,9 +47,10 @@ export async function onRequest(context) {
     `;
 
         // 3. Send the conversation to Cloudflare Workers AI
-        // We use Llama 3.1, which is very capable and fast.
+        // We use Llama 3, which is very capable and fast.
+        // Changing to a more standard model ID to avoid 500 errors.
         const response = await context.env.AI.run(
-            "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+            "@cf/meta/llama-3-8b-instruct",
             {
                 messages: [
                     { role: "system", content: systemPrompt },
@@ -70,7 +71,7 @@ export async function onRequest(context) {
     } catch (err) {
         console.error("Chat API error:", err);
         return Response.json(
-            { error: "Service temporarily unavailable.", details: err.message },
+            { error: "Service temporarily unavailable.", details: err.message, stack: err.stack },
             { status: 500 }
         );
     }
