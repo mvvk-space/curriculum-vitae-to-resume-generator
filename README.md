@@ -31,9 +31,9 @@ Select your target profile and theme from our premium dark-mode dashboard.
 ### 🎭 Theme Selection
 Toggle between different aesthetics to match the job you're applying for.
 
-| Classic | Modern | NeoBrutal |
-| :---: | :---: | :---: |
-| ![Classic](public/screenshots/dashboard.png) | ![Modern](public/screenshots/dashboard_modern.png) | ![NeoBrutal](public/screenshots/dashboard_neobrutal.png) |
+| Classic | Modern | NeoBrutal | Sidebar |
+| :---: | :---: | :---: | :---: |
+| ![Classic](public/screenshots/dashboard.png) | ![Modern](public/screenshots/dashboard_modern.png) | ![NeoBrutal](public/screenshots/dashboard_neobrutal.png) | *Coming Soon* |
 
 ---
 
@@ -57,6 +57,9 @@ A sleek sidebar layout with emerald accents and professional spacing.
 ### 🤘 NeoBrutal Theme
 A bold, high-contrast design for creative and technical roles. Thick borders, bright colors, and hard shadows.
 ![NeoBrutal Resume](public/screenshots/resume_neobrutal.png)
+
+### 📋 Sidebar Theme
+A neo-brutalist 2-column layout with an indigo sidebar. Profile, skills, education, and achievements live in the sidebar; name and experience take the main column. Designed to fit everything on one page.
 
 ## 🇹🇭 Thai Language Support
 

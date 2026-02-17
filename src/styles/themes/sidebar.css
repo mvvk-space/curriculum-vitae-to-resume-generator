@@ -1,0 +1,397 @@
+/* ════════════════════════════════════════════════════════════════
+   SIDEBAR THEME — Neo-Brutalist 2-Column Resume
+   Indigo palette, hard shadows, rounded cards, yellow skill pills.
+   Standalone wireframe — does NOT share HTML with other themes.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Design Tokens ── */
+:root {
+    --bg-color: #e0e7ff;
+    --card-bg: #ffffff;
+    --border-color: #000000;
+    --accent-primary: #a5b4fc;
+    --accent-secondary: #fcd34d;
+    --accent-tertiary: #fca5a5;
+    --text-main: #1f2937;
+    --text-muted: #444444;
+    --shadow-hard: 4px 4px 0px 0px #000000;
+    --shadow-small: 2px 2px 0px 0px #000;
+    --border-width: 3px;
+    --radius: 0.8rem;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Page Setup ── */
+@page {
+    size: letter;
+    margin: 0.3in;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 1.5rem;
+    line-height: 1.4;
+    font-size: 0.92rem;
+}
+
+/* ══════════════════════════════════
+   LAYOUT: Two-Column Grid
+   ══════════════════════════════════ */
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ══════════════════════════════════
+   SIDEBAR (Left Column)
+   ══════════════════════════════════ */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ── Card Base ── */
+.sidebar-card {
+    background: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+/* ── Profile & Contact Card ── */
+.profile-section {
+    text-align: center;
+    background-color: var(--accent-primary);
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.profile-picture img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow:
+        inset 8px 8px 15px rgba(255, 255, 255, 0.4),
+        inset -8px -8px 15px rgba(0, 0, 0, 0.1),
+        4px 4px 0px 0px #000;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    word-break: break-word;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 1.2em;
+    text-align: center;
+}
+
+/* ── Sidebar Section Headings ── */
+.sidebar h3 {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 0.15rem;
+}
+
+/* ── Skills Badges ── */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.skill-badge {
+    background-color: var(--accent-secondary);
+    padding: 0.25rem 0.65rem;
+    border-radius: 50px;
+    border: 2px solid var(--border-color);
+    font-weight: 700;
+    font-size: 0.78rem;
+    box-shadow: var(--shadow-small);
+    transition: transform 0.1s ease;
+}
+
+.skill-badge:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px 0px #000;
+}
+
+/* ── Sidebar Compact Items (Education, Achievements) ── */
+.sidebar-item {
+    margin-bottom: 0.75rem;
+    font-size: 0.84rem;
+    line-height: 1.35;
+}
+
+.sidebar-item:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-item strong {
+    display: block;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.sidebar-item-detail {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-top: 0.1rem;
+}
+
+/* ══════════════════════════════════
+   MAIN CONTENT (Right Column)
+   ══════════════════════════════════ */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* ── Name & Summary Header Card ── */
+header.main-header {
+    background: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-main);
+}
+
+.intro-text {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+/* ── Experience Section Card ── */
+section {
+    background: var(--card-bg);
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-hard);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-bottom: 3px solid #000;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* ── Job Items ── */
+.job-item {
+    margin-bottom: 1.1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #d1d5db;
+}
+
+.job-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.15rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.company {
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
+/* ── Date Pills ── */
+.date {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    background: #000;
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+/* ── Lists ── */
+ul {
+    margin-top: 0.3rem;
+    padding-left: 1.1rem;
+}
+
+li {
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+    font-size: 0.88rem;
+}
+
+li::marker {
+    color: var(--accent-primary);
+}
+
+/* ══════════════════════════════════
+   PRINT BUTTON
+   ══════════════════════════════════ */
+.print-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--accent-secondary);
+    z-index: 100;
+    border-radius: 0.4rem;
+    font-family: 'Sarabun', sans-serif;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.print-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--accent-secondary);
+}
+
+.print-button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--accent-secondary);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ══════════════════════════════════
+   PRINT
+   ══════════════════════════════════ */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        font-size: 0.88rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .resume-container {
+        grid-template-columns: 230px 1fr;
+        gap: 0.8rem;
+        max-width: 100%;
+    }
+
+    .print-button {
+        display: none;
+    }
+
+    .sidebar-card,
+    section,
+    header.main-header {
+        box-shadow: none;
+        border-width: 2px;
+    }
+
+    .skill-badge {
+        box-shadow: none;
+    }
+
+    .job-item {
+        break-inside: avoid;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ══════════════════════════════════
+   PROFILE PICTURE TOGGLE
+   ══════════════════════════════════ */
+.hide-pfp .profile-picture {
+    display: none !important;
+}

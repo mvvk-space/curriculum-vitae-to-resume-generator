@@ -1,0 +1,198 @@
+---
+/**
+ * ═══════════════════════════════════════════════════════════
+ *  SIDEBAR THEME — Standalone Wireframe Layout
+ *  A neo-brutalist 2-column resume with an indigo sidebar.
+ *  Fully independent from the classic/modern/neobrutal themes.
+ * ═══════════════════════════════════════════════════════════
+ */
+import masterCVEn from "../../../../data/master-cv.json";
+import masterCVTh from "../../../../data/master-cv-th.json";
+import profiles from "../../../../data/profiles.json";
+import { filterCV } from "../../../../utils/cv-filter";
+import { mergeCV } from "../../../../utils/cv-merger";
+import type { MasterCV } from "../../../../types/cv";
+
+export function getStaticPaths() {
+    const languages = ["en", "th"];
+    return languages.flatMap((lang) =>
+        profiles.map((profile) => ({
+            params: {
+                lang: lang,
+                profile: profile.slug,
+            },
+            props: {
+                tags: profile.tags,
+                profileName: profile.title,
+                profileSummary: (profile as any).summary,
+                lang: lang,
+            },
+        })),
+    );
+}
+
+import "../../../../styles/themes/sidebar.css";
+
+const { tags, profileName, profileSummary, lang } = Astro.props;
+
+const masterCV = lang === "th"
+    ? mergeCV(masterCVEn as MasterCV, masterCVTh as unknown as Partial<MasterCV>)
+    : masterCVEn;
+const resume = filterCV(masterCV as MasterCV, tags);
+
+if (profileSummary) {
+    resume.basics.summary = profileSummary;
+}
+
+const labels = {
+    en: {
+        education: "Education",
+        experience: "Experience",
+        skills: "Skills",
+        achievements: "Achievements",
+        print: "Print / Save as PDF",
+    },
+    th: {
+        education: "การศึกษา",
+        experience: "ประสบการณ์การทำงาน",
+        skills: "ทักษะ",
+        achievements: "ผลงานและความสำเร็จ",
+        print: "พิมพ์ / บันทึกเป็น PDF",
+    },
+}[lang as "en" | "th"] || {
+    education: "Education",
+    experience: "Experience",
+    skills: "Skills",
+    achievements: "Achievements",
+    print: "Print / Save as PDF",
+};
+---
+
+<html lang={lang}>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{resume.basics.name} — {profileName}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button class="print-button" onclick="window.print()">{labels.print}</button>
+
+        <div class="resume-container">
+            <!-- ═══════ LEFT SIDEBAR ═══════ -->
+            <aside class="sidebar">
+                <!-- Profile & Contact Card -->
+                <div class="sidebar-card profile-section">
+                    {resume.basics.image && (
+                        <div class="profile-picture">
+                            <img id="resume-pfp" src={resume.basics.image} alt={resume.basics.name} />
+                        </div>
+                    )}
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>{resume.basics.location}</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>{resume.basics.email}</span>
+                        </div>
+                        {resume.basics.linkedin && (
+                            <div class="contact-item">
+                                <span class="contact-icon">🔗</span>
+                                <span>{resume.basics.linkedin}</span>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                {resume.skills.length > 0 && (
+                    <div class="sidebar-card">
+                        <h3>{labels.skills}</h3>
+                        <ul class="skills-list">
+                            {resume.skills.map((skill) => (
+                                <li class="skill-badge">{skill.name}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                <!-- Education Card -->
+                {resume.education.length > 0 && (
+                    <div class="sidebar-card">
+                        <h3>{labels.education}</h3>
+                        {resume.education.map((edu) => (
+                            <div class="sidebar-item">
+                                <strong>{edu.institution}</strong>
+                                <span class="sidebar-item-detail">{edu.area}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                <!-- Achievements Card -->
+                {resume.achievements.length > 0 && (
+                    <div class="sidebar-card">
+                        <h3>{labels.achievements}</h3>
+                        {resume.achievements.map((ach) => (
+                            <div class="sidebar-item">
+                                <strong>{ach.text}</strong>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </aside>
+
+            <!-- ═══════ RIGHT MAIN CONTENT ═══════ -->
+            <main class="main-content">
+                <!-- Name & Summary Header -->
+                <header class="main-header">
+                    <h1>{resume.basics.name}</h1>
+                    {resume.basics.summary && (
+                        <div class="intro-text">{resume.basics.summary}</div>
+                    )}
+                </header>
+
+                <!-- Experience Section -->
+                {resume.experience.length > 0 && (
+                    <section class="experience">
+                        <h2>{labels.experience}</h2>
+                        {resume.experience.map((job) => (
+                            <div class="job-item">
+                                <div class="job-header">
+                                    <h3>{job.role}</h3>
+                                    <span class="date">{job.startDate}–{job.endDate}</span>
+                                </div>
+                                {job.company && <div class="company">{job.company}</div>}
+                                <ul>
+                                    {job.highlights.map((point) => (
+                                        <li>{point.text}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </section>
+                )}
+            </main>
+        </div>
+
+        <script is:inline>
+            const params = new URLSearchParams(window.location.search);
+            const pfp = params.get("pfp");
+            if (pfp === "none") {
+                document.body.classList.add("hide-pfp");
+            } else if (pfp) {
+                const img = document.getElementById("resume-pfp");
+                if (img) {
+                    img.src = pfp.startsWith("/") || pfp.startsWith("http")
+                        ? pfp
+                        : "../../../../" + pfp;
+                }
+            }
+        </script>
+    </body>
+</html>
