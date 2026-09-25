@@ -1,7 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Coming soon</title></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Engine</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 46rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.65;
+  }
+  a { color: #0969da; }
+  @media (prefers-color-scheme: dark) { a { color: #4493f8; } }
+  pre {
+    background: #f6f8fa; border-radius: 6px; padding: 1rem;
+    overflow-x: auto; font-size: 0.875rem;
+  }
+  @media (prefers-color-scheme: dark) { pre { background: #151b23; } }
+  code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  table { border-collapse: collapse; }
+  th, td { border: 1px solid #d0d7de; padding: 0.375rem 0.75rem; }
+  th { background: #f6f8fa; }
+  @media (prefers-color-scheme: dark) { th, td { border-color: #3d444d; } th { background: #151b23; } }
+  h1, h2 { border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; }
+  @media (prefers-color-scheme: dark) { h1, h2 { border-color: #3d444d; } }
+</style>
+</head>
 <body>
-<h1>This page does not have an index.html set up yet!</h1>
+<h1>Resume Engine</h1>
+<p>A powerful, highly-customizable resume generator. Generate tailored resumes for different roles from a single Master CV data source using advanced tag-based filtering.</p>
+<p><strong>Repository:</strong> <a href="https://github.com/mvvk-space/curriculum-vitae-to-resume-generator">mvvk-space/curriculum-vitae-to-resume-generator</a></p>
+<h2>Features</h2>
+<ul>
+<li><strong>Multi-Profile Generation</strong> — create specific CV versions (Teaching, Technical, Business, etc.) from one <code>master-cv.json</code>.</li>
+<li><strong>Multilingual Support</strong> — seamlessly switch between English and Thai resume versions, including localized date formats and headers.</li>
+<li><strong>Dynamic Themes</strong> — switch between multiple professional styles in real time.</li>
+<li><strong>Identity Gallery</strong> — drag-and-drop profile pictures and select them from a visual gallery.</li>
+<li><strong>PDF Ready</strong> — optimized for &quot;Print to PDF&quot; with letter-size formatting and high-fidelity layouts.</li>
+<li><strong>Built with Astro</strong> — deployed to Cloudflare (see <code>wrangler.json</code>).</li>
+</ul>
+<h2>What&#39;s here</h2>
+<ul>
+<li><code>src/</code> — the Astro app</li>
+<li><code>dist/</code> — a pre-built version, ready to serve</li>
+<li><code>public/</code> — static assets</li>
+<li><code>wrangler.json</code> — Cloudflare Workers config</li>
+</ul>
+<h2>Running it</h2>
+<pre><code class="language-sh">bun install
+bun run dev
+</code></pre>
+<p>Or serve the pre-built <code>dist/</code> directory with any static file server.</p>
+
 </body>
 </html>
